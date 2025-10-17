@@ -9,8 +9,7 @@ error_reporting(0);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="css/index_style.css">
-    <link rel="stylesheet" href="css/form_style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script>
         function checkpwd() {
             var p1 = document.f1.password.value;
@@ -28,51 +27,12 @@ error_reporting(0);
 </head>
 
 <body>
-    <div class="grid-container">
-        <!-- Header Section -->
-        <div class="header">
-            <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
-                    height="100" id="logo1" /></a>
+    <!-- Header JS -->
+    <script src="js/header.js"></script>
+    <my-header></my-header>
 
-            <h1>Chameli Devi Group of Institutions, Indore</h1>
-            <h2>Web Development</h2>
-
-            <a href="https://github.com/dayanandyadav205" target="_blank"><img src="images/Dayanand.jpg" alt="GitHub"
-                    style="float: right;" width="100" height="100" id="logo2" /></a>
-        </div>
-
-        <!-- Navigation Section -->
-        <div class="nav">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="login_admin.php" style="float: right;">Admin Login</a>
-                <a href="login_user.php" style="float: right;">User Login</a>
-                <a href="form.php" style="float: right;">Sign Up</a>
-            </nav>
-        </div>
-
-        <!--Go to Top -->
-        <div class="top">
-            <a href="#top">Top</a>
-        </div>
-
-
-        <!-- Aside Section -->
-        <div class="aside">
-            <aside>
-                <h3>References</h3>
-                <ul>
-                    <li><a href="https://github.com/">GitHub</a></li>
-                    <li><a href="https://www.google.com">Google</a></li>
-                    <li><a href="https://www.w3schools.com/">W3C</a></li>
-                    <li><a href="https://whatwg.org/">WHATWG</a></li>
-                </ul>
-            </aside>
-        </div>
-        
-           <!-- Form -->
-    <div class="container">
+    <!-- Form -->
+    <div class="form_container">
         <div class="title">
             Sign Up
         </div>
@@ -173,23 +133,9 @@ error_reporting(0);
         </form>
     </div>
 
-        </div>
-        <!-- Footer Section -->
-        <div class="footer">
-            <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
-                <img src="images/linkedin.jpg" width="3%"></a>
-
-            <a href="https://mail.google.com/a/cdgi.edu.in">
-                <img src="images/gmail.jpg" width="5%"></a>
-
-            <a href="https://www.youtube.com/@socialcdgi">
-                <img src="images/youtube.jpg" width="3%"></a>
-
-            <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-
-        </div>
-    </div>
-
+    <!-- Footer JS -->
+    <script src="js/footer.js"></script>
+    <my-footer></my-footer>
 </body>
 
 </html>

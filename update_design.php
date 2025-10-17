@@ -37,11 +37,10 @@ $language1  = explode(",", $language)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
      <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form_style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="form_container">
         <div class="title">
             Update Details
         </div>
@@ -260,7 +259,7 @@ if ($_POST['update'])
         echo "<script >alert('Record Updated')</script>";
         ?>
 
-            <meta http-equiv="refresh" content="0;url = http://localhost/web_development/display.php"/>
+            <meta http-equiv="refresh" content="0;url = http://localhost/IWT/display_admin.php"/>
 
         <?php
         } 
