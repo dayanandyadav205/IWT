@@ -19,13 +19,18 @@ class MyHeader extends HTMLElement {
     </div>
   </div>
 
-  <!-- Navigation Bar -->
+ <!-- Navigation Bar -->
   <div class="navbar">
-      <a href="index.html"><img src="images/home.ico" alt=""></a>
-      <a href="contact.html">Contact</a>
-      <a href="login_admin.php" style="justify-content: right;">Admin Login</a>
-      <a href="login_user.php">User Login</a>
-      <a href="form.php">Sign Up</a>
+       <div class="left-group">
+          <a href="index.html"><img src="images/home.ico" alt=""></a>
+          <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="right-group">
+          <a href="login_admin.html">Admin Login</a>
+          <a href="login_user.html">User Login</a>
+          <a href="form.html">Sign Up</a>
+      </div>
   </div>
   
     </header>`;
