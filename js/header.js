@@ -27,9 +27,9 @@ class MyHeader extends HTMLElement {
       </div>
 
       <div class="right-group">
-          <a href="login_admin.html">Admin Login</a>
-          <a href="login_user.html">User Login</a>
-          <a href="form.html">Sign Up</a>
+          <a href="login_admin.php">Admin Login</a>
+          <a href="login_user.php">User Login</a>
+          <a href="form.php">Sign Up</a>
       </div>
   </div>
   
