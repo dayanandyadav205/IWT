@@ -29,7 +29,7 @@ session_start();
     <!-- Form -->
     <div class="form_container" style="width: 400px;">
         <div class="title">
-            Admin Login
+            User Login
         </div>
         <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
             <div class="form">
