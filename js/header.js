@@ -19,10 +19,9 @@ class MyHeader extends HTMLElement {
     </div>
 
     <div>
-     
+        <img src="images/dayanand.jpg" alt="CDGI Logo" width="100" height="100" />
     </div>
-  </div>
-
+ </div>
   <!-- Navigation Bar -->
   <div class="navbar">
           <a href="index.html"><i class="fa-solid fa-house"></i></a>
