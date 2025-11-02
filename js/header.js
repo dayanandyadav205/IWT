@@ -10,7 +10,7 @@ class MyHeader extends HTMLElement {
   <!-- Header -->
   <div class="header">
     <div>
-      <img src="images/cdgi.jpg" alt="CDGI Logo" width="100" height="100" />
+      <img src="images/cdgi.jpg" alt="CDGI Logo"/>
     </div>
 
     <div>
@@ -18,9 +18,10 @@ class MyHeader extends HTMLElement {
       <h2>Web Development</h2>
     </div>
 
-    <div>
-        <img src="images/dayanand.jpg" alt="CDGI Logo" width="100" height="100" />
+     <div>
+      <img src="images/dayanand.ico" alt=" "/>
     </div>
+
  </div>
   <!-- Navigation Bar -->
   <div class="navbar">
