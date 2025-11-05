@@ -10,20 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        function checkpwd() {
-            var p1 = document.f1.password.value;
-            var p2 = document.f1.cpassword.value;
-
-            if (p1 == p2) {
-                return true;
-            }
-            else {
-                alert("Password mismatch");
-                return false;
-            }
-        }
-    </script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -56,7 +43,8 @@
 
                 <div class="input_field">
                     <label>Password</label>
-                    <input type="password" class="input" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    <input type="password" class="input" name="password" id="pwd"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                         required>
                 </div>
