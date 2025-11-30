@@ -1,20 +1,24 @@
 /* Universal Selector */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the body */
 body {
   font-family: sans-serif;
-  margin: 0;
-  scroll-behavior: smooth;
+  /* background-color: whitesmoke; */
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
-  padding: 40px;
-  background: #1abc9c;
+  padding: 50px;
+  background-color: #4F6E7D;
+  /* background-color: #1D1044; */
+  /* background-color: #8DBCD0; */
+  /* background:#4ABCAD; */
   color: white;
   align-items: center;
   text-align: center;
@@ -27,10 +31,15 @@ body {
   height: 100px;
 }
 
+.header h1 {
+  font-family: "Audiowide", sans-serif;
+}
+
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #333333;
+  background-color: #2C2C2C;
+  /* background-color: #c7c3c3; */
 }
 
 .navbar i {
@@ -45,7 +54,7 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #1abc9c;
+  background-color: #4F6E7D;
   color: #ffffff;
 }
 
@@ -55,14 +64,14 @@ body {
   position: sticky;
   right: 10px;
   top: 20px;
-  width: 60px;
+  /* width: 60px; */
   float: right;
 }
 
 .top {
-  padding: 20px;
-  background: #ff8b24;
-  border-radius: 10px;
+  padding: 10px;
+  background: #2C2C2C;
+  border-radius: 50%;
 }
 
 .container-top a {
@@ -73,20 +82,16 @@ body {
 
 /* Column container */
 .row {
-  /* border: 10px solid red; */
   display: flex;
   width: 100%;
-  /* margin: 10px; */
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .row .side {
-  /* display: flex; */
-  flex: 25%;
-  background-color: #1abc9c;
+  flex: 20%;
+  background-color: #EFEFEF;
   padding: 20px;
-  margin-top: -50px;
 }
 
 .row .side .aboutMe {
@@ -95,28 +100,40 @@ body {
   box-sizing: border-box;
   padding: 10px;
   height: auto;
+  /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
+  border-radius: 10px;
+  background-color: #4F6E7D;
+  color: white;
 }
 
 .row .side .aboutMe .myImg img {
-  border-radius: 10px;
+  border-radius: 50%;
   width: 120px;
   height: 130px;
+  /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
+  border-radius: 50%;
 }
 
 .row .side .aboutMe .myIntro {
   padding: 10px;
   text-align: left;
-  color: white;
-  margin-top: -30px;
+  /* color: white; */
 }
 
-.row .side .myLinks{
- display: flex;
+.row .side .aboutMe .myIntro p {
+  font-size: 14px;
+}
+
+.row .side .myLinks {
+  display: flex;
   border: 2px solid white;
   box-sizing: border-box;
   padding: 10px;
   height: auto;
-  color: white;
+  /* color: white; */
+  /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
+  border-radius: 10px;
+  background-color: #4F6E7D;
 }
 
 .row .side .myLinks ul li {
@@ -131,69 +148,59 @@ body {
   color: #ffffff;
 }
 
-.row .side .myLinks ul li a:hover {
-  color: #333333;
-}
+/* .row .side .myLinks ul li a:hover {
+  color: #1D1044;
+} */
 
 /* Main column/right column */
 .row .main {
   flex: 75%;
-  padding: 20px;
-  margin-top: -80px;
+  padding: 10px;
+  background-color: whitesmoke;
 }
 
 .row .main img {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
+  border: 2px solid white;
 }
 
-.row .main h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  text-align: center;
-}
-
-.row .main .headings {
-  background-color: lightblue;
-}
-
-.row .main .para-formatting {
-  background-color: lightcoral;
-}
-
-.row .main .myLists {
-  background-color: lightgreen;
-}
-
-.row .main .myTable {
-  background-color: lightsalmon;
-}
-
-.row .main .myMedia {
-  padding: 10px;
-  background-color: lightpink;
-}
 
 /* Footer */
 .footer {
   padding: 20px;
-  background: #333333;
+  background: #4F6E7D;
   align-items: center;
   justify-items: center;
   align-content: center;
   justify-content: center;
-    color: white;
+  color: white;
+}
+
+/* Contact CSS */
+.contact-container {
+  background-color: #4F6E7D;
+  border-radius: 20px;
+  margin: 50px;
+  margin-left: 20%;
+  padding: 20px;
+  width: 750px;
+  height: 600px;
+}
+
+.map-iframe iframe {
+  width: 700px;
+  height: 500px;
 }
 
 /* ================================================================ */
 /* Form CSS */
 .form_container {
   max-width: 500px;
-  background-color: #1abc9c;
+  background-color: #4F6E7D;
+  border: 2px solid white;
   margin: 20px 20px;
   padding: 30px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
@@ -292,16 +299,16 @@ p {
     text-align: center;
   }
 
-  /* .side {
-    margin-top: -40px;
+  .form_container .form {
+    width: 70%;
   }
 
-  .main {
-    margin-top: 10px;
-  } */
+  .contact-container {
+    width: 70%;
+  }
 
-  .form_container .form {
-    width: 50%;
+  .map-iframe iframe {
+    width: 100%;
   }
 
   .form_container .form .input_field {

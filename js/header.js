@@ -26,9 +26,9 @@ class MyHeader extends HTMLElement {
   <div class="navbar">
           <a href="index.html"><i class="fa-solid fa-house"></i></a>
           <a href="contact.html">Contact Us</a>
-          <a href="login_admin.html">Admin Login</a>
-          <a href="login_user.html">User Login</a>
-          <a href="form.html">Sign Up</a>
+          <a href="login_admin.php">Admin Login</a>
+          <a href="login_user.php">User Login</a>
+          <a href="form.php">Sign Up</a>
   </div>
   
     </header>`;
