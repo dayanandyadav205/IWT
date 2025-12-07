@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +12,18 @@
 </head>
 
 <body>
-  <h1>PHP Browser Detection</h1>
-  <a href="logout.php"><input type="submit" value="Logout"></a>
+  <h1>PHP Browser Detection 1</h1>
+  
+  <input type="text" placeholder="Enter user name" name="user_name"><br><br>
+    <input type="password" placeholder="Enter password"><br><br>
 
-</body>
+  <button><a href="browser_detection2.php">Login</a></button><br><br>
+
+  <?php
+  // Set session variables
+  $_SESSION["user_name"] = "dayanand";
+  ?>
+
+  </body>
 
 </html>

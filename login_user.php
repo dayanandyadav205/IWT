@@ -59,41 +59,6 @@ session_start();
         <a href="login_admin.php">Admin Login</a>
     </div>
 
-    <!--Go to Top -->
-    <div class="container-top">
-        <a href="#top" class="top">Top</a>
-    </div>
-
-
-    <!-- The flexible grid (content) -->
-    <div class="row">
-        <div class="side">
-            <div class="aboutMe">
-                <div class="myImg">
-                    <img src="images/dayanand.jpg" alt=" " />
-                </div>
-                <div class="myIntro">
-                    <h3>About Me</h3>
-                    <p>I am Dayanand Yadav, working as an Assistant Professor in Computer Science & Engineering
-                        Department in
-                        Chameli Devi Group of Institutions, Indore</p>
-                </div>
-            </div>
-            <div class="myLinks">
-                <h3>My Links</h3>
-                <ul>
-                    <li><a href="https://github.com/dayanandyadav205"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/dayanandyadav205"><i class="fa-brands fa-linkedin"></i></a>
-                    </li>
-                    <li><a href="mailto:dayanandyadav205@gmail.com" target="_top"><i
-                                class="fa-solid fa-envelope"></i></a></li>
-                    <li><a href="https://www.w3.org/"><i class="fa-brands fa-w3c"></i></a></li>
-                </ul>
-            </div>
-
-        </div>
-
-
         <!-- Form -->
         <div class="form_container" style="width: 400px;">
             <div class="title">

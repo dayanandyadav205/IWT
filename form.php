@@ -12,40 +12,7 @@
     <link rel="icon" href="images/home.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <script>
-        <script>
-
-        // function to check Password
-            function checkpwd() {
-            var p1 = document.f1.password.value;
-            var p2 = document.f1.cpassword.value;
-
-            if (p1 == p2) {
-                return true;
-            }
-
-            else {
-                document.getElementById("pwdmsg").innerHTML = "Password Mismatch";
-            document.getElementById("pwdmsg").style.color = "#f20f0fff";
-            return false;
-            }
-        }
-
-
-            // function Show Password
-            function showpwd() {
-            var x = document.getElementById("pwd");
-
-            if (x.type === "password") {
-                x.type = "text";
-            }
-            else {
-                x.type = "password";
-            }
-        }
-
-    </script>
-    </script>
+    
 </head>
 
 <body>
@@ -84,150 +51,150 @@
         <a href="login_admin.php">Admin Login</a>
     </div>
 
-    <!--Go to Top -->
-    <div class="container-top">
-        <a href="#top" class="top">Top</a>
+
+    <!-- Form -->
+    <div class="form_container">
+        <div class="title">
+            Sign Up
+        </div>
+        <form name="f1" action="form.php" method="POST" onsubmit="return checkpwd()">
+            <div class="form">
+                <div class="input_field">
+                    <label>Upload Image</label>
+                    <input type="file" name="uploadfile_img" style="width:100%;" required>
+                </div>
+
+                <div class="input_field">
+                    <label>First Name</label>
+                    <input type="text" class="input" name="fname" required>
+                </div>
+
+                <div class="input_field">
+                    <label>Last Name</label>
+                    <input type="text" class="input" name="lname" required>
+                </div>
+
+                <div class="input_field">
+                    <label>Password</label>
+                    <input type="password" class="input" name="password" id="pwd"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        required> &nbsp;
+                        <input type="checkbox" onclick="showpwd()">&nbsp; Show Password
+                </div>
+
+                <div class="input_field">
+                    <label>Confirm Password</label>
+                    <input type="password" class="input" name="cpassword" required>
+                </div>
+
+                <div class="input_field">
+                    <label>Gender</label>
+                    <div class="custom_select">
+                        <select name="gender" id="" required>
+                            <option value="Not Selected">Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input_field">
+                    <label>Email Address</label>
+                    <input type="email" class="input" name="email" required>
+                </div>
+
+                <div class="input_field">
+                    <label>Phone Number</label>
+                    <input type="text" class="input" name="phone" required>
+                </div>
+
+                <div class="input_field">
+                    <label style="margin-right: 100px">Caste</label>
+                    <input type="radio" class="input" name="caste" value="General"><label
+                        style="margin-left: -20px">General</label>
+                    <input type="radio" class="input" name="caste" value="OBC"><label
+                        style="margin-left: -20px">OBC</label>
+                    <input type="radio" class="input" name="caste" value="SC"><label
+                        style="margin-left: -20px">SC</label>
+                    <input type="radio" class="input" name="caste" value="ST"><label
+                        style="margin-left: -20px">ST</label>
+                </div>
+
+                <div class="input_field">
+                    <label style="margin-right: 100px">Languages</label>
+                    <input type="checkbox" class="input" name="language[]" value="Hindi"><label
+                        style="margin-left: 5px">Hindi</label>
+                    <input type="checkbox" class="input" name="language[]" value="Urdu"><label
+                        style="margin-left: 5px">Urdu</label>
+                    <input type="checkbox" class="input" name="language[]" value="English"><label
+                        style="margin-left: 5px">English</label>
+                </div>
+
+                <div class="input_field">
+                    <label>Address</label>
+                    <textarea name="address" id="" required></textarea>
+                </div>
+
+                <div class="input_field">
+                    <label>Upload Document</label>
+                    <input type="file" name="uploadfile_doc" style="width:100%;" required>
+                </div>
+
+                <div class="input_field terms">
+                    <label class="check">
+                        <input type="checkbox" name="check" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Agree terms and conditions</p>
+                </div>
+                <div class="input_field">
+                    <input type="submit" value="Register" class="btn" name="register">
+                </div>
+            </div>
+        </form>
     </div>
 
-
-    <!-- The flexible grid (content) -->
-    <div class="row">
-        <div class="side">
-            <div class="aboutMe">
-                <div class="myImg">
-                    <img src="images/dayanand.jpg" alt=" " />
-                </div>
-                <div class="myIntro">
-                    <h3>About Me</h3>
-                    <p>I am Dayanand Yadav, working as an Assistant Professor in Computer Science & Engineering
-                        Department in
-                        Chameli Devi Group of Institutions, Indore</p>
-                </div>
-            </div>
-            <div class="myLinks">
-                <h3>My Links</h3>
-                <ul>
-                    <li><a href="https://github.com/dayanandyadav205"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/dayanandyadav205"><i class="fa-brands fa-linkedin"></i></a>
-                    </li>
-                    <li><a href="mailto:dayanandyadav205@gmail.com" target="_top"><i
-                                class="fa-solid fa-envelope"></i></a></li>
-                    <li><a href="https://www.w3.org/"><i class="fa-brands fa-w3c"></i></a></li>
-                </ul>
-            </div>
-
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
         </div>
+    </footer>
 
 
-        <!-- Form -->
-        <div class="form_container">
-            <div class="title">
-                Sign Up
-            </div>
-            <form name="f1" action="#" method="POST" enctype="multipart/form-data" onsubmit="return checkpwd()"
-                autocomplete="on">
-                <div class="form">
-                    <div class="input_field">
-                        <label>Upload Image</label>
-                        <input type="file" name="uploadfile_img" style="width:100%;" required>
-                    </div>
+    <script>
 
-                    <div class="input_field">
-                        <label>First Name</label>
-                        <input type="text" class="input" name="fname" required>
-                    </div>
+        // function to check Password
+        function checkpwd() {
+            var p1 = document.f1.password.value;
+            var p2 = document.f1.cpassword.value;
 
-                    <div class="input_field">
-                        <label>Last Name</label>
-                        <input type="text" class="input" name="lname" required>
-                    </div>
+            if (p1 == p2) {
+                return true;
+            }
 
-                    <div class="input_field">
-                        <label>Password</label>
-                        <input type="password" class="input" name="password" id="pwd"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                            required>
-                    </div>
+            else {
+                document.getElementById("pwdmsg").innerHTML = "Password Mismatch";
+                document.getElementById("pwdmsg").style.color = "#f20f0fff";
+                return false;
+            }
+        }
 
-                    <div class="input_field">
-                        <label>Confirm Password</label>
-                        <input type="password" class="input" name="cpassword" required>
-                    </div>
 
-                    <div class="input_field">
-                        <label>Gender</label>
-                        <div class="custom_select">
-                            <select name="gender" id="" required>
-                                <option value="Not Selected">Select</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-                    </div>
+        // function Show Password
+        function showpwd() {
+            var x = document.getElementById("pwd");
 
-                    <div class="input_field">
-                        <label>Email Address</label>
-                        <input type="email" class="input" name="email" required>
-                    </div>
+            if (x.type === "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
 
-                    <div class="input_field">
-                        <label>Phone Number</label>
-                        <input type="text" class="input" name="phone" required>
-                    </div>
-
-                    <div class="input_field">
-                        <label style="margin-right: 100px">Caste</label>
-                        <input type="radio" class="input" name="caste" value="General"><label
-                            style="margin-left: -20px">General</label>
-                        <input type="radio" class="input" name="caste" value="OBC"><label
-                            style="margin-left: -20px">OBC</label>
-                        <input type="radio" class="input" name="caste" value="SC"><label
-                            style="margin-left: -20px">SC</label>
-                        <input type="radio" class="input" name="caste" value="ST"><label
-                            style="margin-left: -20px">ST</label>
-                    </div>
-
-                    <div class="input_field">
-                        <label style="margin-right: 100px">Languages</label>
-                        <input type="checkbox" class="input" name="language[]" value="Hindi"><label
-                            style="margin-left: 5px">Hindi</label>
-                        <input type="checkbox" class="input" name="language[]" value="Urdu"><label
-                            style="margin-left: 5px">Urdu</label>
-                        <input type="checkbox" class="input" name="language[]" value="English"><label
-                            style="margin-left: 5px">English</label>
-                    </div>
-
-                    <div class="input_field">
-                        <label>Address</label>
-                        <textarea name="address" id="" required></textarea>
-                    </div>
-
-                    <div class="input_field">
-                        <label>Upload Document</label>
-                        <input type="file" name="uploadfile_doc" style="width:100%;" required>
-                    </div>
-
-                    <div class="input_field terms">
-                        <label class="check">
-                            <input type="checkbox" name="check" required>
-                            <span class="checkmark"></span>
-                        </label>
-                        <p>Agree terms and conditions</p>
-                    </div>
-                    <div class="input_field">
-                        <input type="submit" value="Register" class="btn" name="register">
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer">
-                <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-            </div>
-        </footer>
+    </script>
 </body>
 
 </html>
