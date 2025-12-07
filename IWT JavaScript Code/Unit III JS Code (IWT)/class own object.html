@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1">
+  <title>Document</title>
+</head>
+
+<p id="currentTime"></p>
+
+<body>
+  <script>
+    let time = new Date();
+
+    let hh = time.getHours();
+    let mm = time.getMinutes();
+    let ss = time.getSeconds();
+    let ms = time.getMilliseconds();
+
+    document.getElementById("currentTime").innerHTML ="Current Time is:" +hh + ":" +mm +":" +ss;
+  </script>
+
+</body>
+
+</html>

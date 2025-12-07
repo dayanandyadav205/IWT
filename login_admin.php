@@ -118,6 +118,7 @@ session_start();
                 </div>
             </form>
         </div>
+        <br>
 
         <!-- Footer -->
         <footer>

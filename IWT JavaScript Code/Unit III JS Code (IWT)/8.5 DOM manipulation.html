@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    img {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>4. JavaScript can remove existing HTML elements</h1>
+
+  <p>Click the button to remove the image element from web page.</p>
+
+  <p>Image 1</p>
+  <img src="img/fiat.jpg" alt="" id="img1"><br><br>
+
+  <p>Image 2</p>
+  <img src="img/smily.gif" alt="" id="img2"><br><br><br>
+
+  <button onclick="removeElement1()">Remove Image1</button>
+
+  <button onclick="removeElement2()">Remove Image2</button>
+
+  <script>
+    function removeElement1() {
+      const elementToRemove = document.getElementById("img1").remove();
+    }
+
+    function removeElement2() {
+      const elementToRemove = document.getElementById("img2").remove();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>8.5 JavaScript can remove existing html Elements</h1>
+
+  <img src="img/fiat.jpg" alt="" width="200" height="200" id="myImg">
+
+  <br>
+
+  <button onclick="removeElement()">Remove Element</button>
+
+  <script>
+    function removeElement() {
+      document.getElementById("myImg").remove();
+      confirm("Are you want to delete this image?");
+    }
+  </script>
+</body>
+
+</html>

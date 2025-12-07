@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: lightsalmon;
+    }
+    p{
+      font-size: 50px;
+    }
+
+    button{
+      width: 150px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: #333333;
+      color: white;
+    }
+
+    img{
+      height: 30%;
+      width: 30%;
+      box-shadow: 5px 5px 2px #823948;
+      border-radius: 30px;
+      margin-left: 10%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Object in JavaScript</h1>
+   <p id="showResult"></p> <br>
+
+  <button onclick="carType()">Car type/name</button>
+
+  <button onclick="carModel()">Car Model</button>
+
+  <button onclick="carColor()">Car Color</button>
+
+  <br><br>
+
+  <img src="img/fiat.jpg" alt="">
+
+  <script>
+    let car = {type:"Fiat", model:"F500", color:"White"};
+
+    function carType() {
+      document.getElementById("showResult").innerHTML = "The type of car is:" +car.type;
+    }
+
+    function carModel(){
+      document.getElementById("showResult").innerHTML = "The model is: " +car.model;
+    }
+
+    function carColor(){
+      document.getElementById("showResult").innerHTML = "The car color is" +car.color;
+    }
+  </script>
+
+
+</body>
+</html>

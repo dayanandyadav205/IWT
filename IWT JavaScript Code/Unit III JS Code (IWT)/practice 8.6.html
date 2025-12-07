@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>8.6 JavaScript can set Attributes</h1>
+
+  <input type="password" id="pwd">
+  <input type="checkbox" onclick="setAtt()">
+
+  <script>
+    function setAtt(){
+      document.getElementById("pwd").setAttribute("type", "passoword");
+    }
+  </script>
+</body>
+</html>

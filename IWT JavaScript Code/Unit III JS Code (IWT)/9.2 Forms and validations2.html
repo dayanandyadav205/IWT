@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function chkpwd() {
+      var p1 = document.f1.password.value;
+      var p2 = document.f1.cpassword.value;
+
+      if (p1 == p2) {
+        return true;
+      }
+      else {
+        document.getElementById("alert").innerHTML = "Password Mismatch";
+        return false;
+      }
+    }
+
+    function showpwd() {
+      var x = document.getElementById("pwd");
+
+      if(x.type == "password"){
+        x.type = "text";
+      }
+      else{
+        x.type = "password";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h2>JavaScript Validation</h2>
+  <form name="f1" action="#" onsubmit="return chkpwd()">
+
+    <input type="password" name="password" id="pwd" placeholder="Enter Password">
+    <input type="checkbox" onclick="showpwd()"><br><br>
+    <input type="password" name="cpassword" placeholder="Confirm Password"><br><br>
+
+    <span id="alert" style="color: red;"></span><br>
+
+    <input type="submit" value="Submit"><br>
+
+    
+  </form>
+</body>
+
+</html>
