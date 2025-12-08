@@ -13,17 +13,15 @@ session_start();
 
 <body>
   <h1>PHP Browser Detection 1</h1>
-  
-  <input type="text" placeholder="Enter user name" name="user_name"><br><br>
-    <input type="password" placeholder="Enter password"><br><br>
 
-  <button><a href="browser_detection2.php">Login</a></button><br><br>
+  <a href="browser_detection2.php">Go to another page (browser_detection2.php)</a><br><br>
 
   <?php
   // Set session variables
   $_SESSION["user_name"] = "dayanand";
+  echo "Session variable set";
   ?>
 
-  </body>
+</body>
 
 </html>
