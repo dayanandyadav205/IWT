@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      height: 50px;
+      width: 200px;
+      font-size: x-large;
+      border-radius: 50px;
+    }
+
+    button:hover {
+      background-color: rgb(1, 55, 81);
+      color: white;
+    }
+
+    img {
+      border-radius: 50px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  </style>
+
+  <!-- JavaScript Code -->
+  <script>
+    var car = { type: "Fiat", model: "F500", color: "white" };
+
+    function CarType() {
+      document.getElementById("demo").innerHTML = "Car Type is: " + car.type;
+    }
+
+    function CarModel() {
+      document.getElementById("demo").innerHTML = "Car model is: " + car.model;
+    }
+
+    function CarColor() {
+      document.getElementById("demo").innerHTML = "Car color is: " + car.color;
+    }
+  </script>
+</head>
+
+<body>
+  <!-- HTML code -->
+  <h1>JavaScript Objects</h1>
+  <h2>Creating an Object</h2>
+
+  <h3> Click on below buttons for car specification:</h3>
+
+  <button onclick="CarType()">Click type</button>
+
+  <button onclick="CarModel()">Click model</button>
+
+  <button onclick="CarColor()">Click color</button>
+
+  <br>
+
+  <span id="demo" style="font-size: 40px;"></span>
+
+  <br>
+
+  <img src="img/fiat.jpg" height=60% width=60%><br>
+
+</body>
+
+</html>

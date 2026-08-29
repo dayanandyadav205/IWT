@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body id="id1">
+  <h1>Javascript can add new HTML Elemetns</h1>
+
+  <button onclick="createElement()">Create Element (Paragraph)</button>
+  <script>
+    function createElement(){
+    let node = document.createTextNode('This is my Paragraph');
+    let para = document.createElement('p').appendChild(node);
+
+    document.getElementById("id1").appendChild(para);
+    }
+  </script>
+</body>
+</html>

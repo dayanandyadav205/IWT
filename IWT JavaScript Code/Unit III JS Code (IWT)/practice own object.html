@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1">
+  <title>Document</title>
+  <style>
+    p{
+      font-size: 100px;
+      color:rgb(63, 4, 119);
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Own Objects</h1>
+
+  <p id="demo"></p>
+
+  <script>
+    let time = new Date();
+
+    let hh = time.getHours();
+    let mm = time.getMinutes();
+    let ss = time.getSeconds();
+
+    document.getElementById("demo").innerHTML = (hh + ":" + mm + ":" +ss);
+    </script>
+</body>
+</html>

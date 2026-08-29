@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function validateForm(){
+      let x = document.getElementById("fname").value;
+
+      if(x === ""){
+        document.getElementById("msg").innerHTML = "Please fill out first name";
+        document.getElementById("msg").style.color = "red";
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action="#" onsubmit="return validateForm()">
+    <input type="text" id="fname" placeholder="First Name">
+    <p id="msg"></p>
+    <input type="submit">
+  </form>
+</body>
+</html>

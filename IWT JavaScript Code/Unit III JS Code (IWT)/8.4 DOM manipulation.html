@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>6. JavaScript can add new HTML elements </h1>
+
+  <div id="div1">
+
+  </div>
+
+  <button onclick="myFunction()">Click Here</button>
+
+  <script>
+    function myFunction(){
+    let node = document.createTextNode("This is new.");
+
+    let para = document.createElement("p").appendChild(node);
+
+    document.getElementById("div1").appendChild(para);
+
+    }
+  </script>
+</body>
+
+</html>

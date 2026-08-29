@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>5. The switch Statement</h1>
+
+  <p id="demo"></p>
+
+  <script>
+    //new Date() creates a new Date object representing the current date and time.
+
+    //getDay() returns the day of the week as a number (0 for Sunday, 1 for Monday, ..., 6 for Saturday).
+
+    //The result is stored in the variable date.
+
+    let date = new Date().getDay();
+    let day; //Declares a variable 'day' that will hold the name of the day 
+    switch (date) //A 'switch' statement checks the value of date and assigns the corresponding day name to the day variable
+    {
+      case 0: //Each 'case' matches a number to a day name.
+        day = "Sunday";
+        break; //'break' ensures the switch exits after finding the correct match
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+    }
+
+    //This line finds the HTML element with the ID demo
+    //Sets its inner HTML content to "Today is" followed by the day name stored in day.
+    document.getElementById("demo").innerHTML = "Today is" + day; 
+  </script>
+
+
+</body>
+
+</html>
