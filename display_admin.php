@@ -13,41 +13,15 @@ echo "Welcome " . $_SESSION['user_name'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Admin</title>
     <link rel="stylesheet" href="css/style.css">
+ <!-- Link the JavaScript file -->
+    <script src="layout.js" defer></script>
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div>
-            <img src="images/cdgi.jpg" alt="CDGI Logo" />
-        </div>
+  <!-- Header -->
+<!-- Placeholders for injected content -->
+    <div id="header-placeholder"></div>
 
-        <div>
-            <h1>Chameli Devi Group of Institutions, Indore (MP)</h1><br>
-            <h2>Internet & Web Technology</h2><br>
-            <h4>B.Tech-CSE, V Semester</h4>
-        </div>
-
-        <div>
-
-        </div>
-    </div>
-
-    <div class="navbar">
-    <a href="index.html"><i class="fa-solid fa-house"></i></a>
-    
-    <!-- Changed from file:///C:\xampp\htdocs\IWT\... to clean relative folder paths -->
-    <a href="IWT HTML Code/" target="_blank">HTML Code</a>
-    <a href="IWT CSS Code/" target="_blank">CSS Code</a>
-    <a href="IWT JavaScript Code/" target="_blank">JavaScript Code</a>
-    <a href="Unit IV XML Code (IWT)/" target="_blank">XML Code</a>
-    <a href="Unit IV PHP Code (IWT)/" target="_blank">PHP Code</a>
-    
-    <a href="contact.html">Our Contact</a>
-    <a href="form.php">Sign Up</a>
-    <a href="login_user.php">User Login</a>
-    <a href="login_admin.php">Admin Login</a>
-</div>
 
 
         <?php
@@ -115,14 +89,10 @@ echo "Welcome " . $_SESSION['user_name'];
 
         </table>
 
+ <!-- Footer -->
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer">
-                <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-            </div>
-        </footer>
-
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
 </body>
 

@@ -14,10 +14,9 @@ body {
 .header {
   display: flex;
   padding: 40px;
-  background: #d4d41f;
   padding: 50px;
-  background-color: #066595;
-  color: white;
+  background-color: #fca47c; 
+  /* color: white; */
   align-items: center;
   text-align: center;
   justify-content: space-between;
@@ -51,8 +50,8 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #066595;
-  color: #ffffff;
+  background-color: #fca47c;
+  color: #000000;
 }
 
 /* Go to Top button */
@@ -67,7 +66,7 @@ body {
 
 .top {
   padding: 10px;
-  background: #000000;
+  background: red;
   border-radius: 50%;
 }
 
@@ -75,6 +74,11 @@ body {
   text-decoration: none;
   color: white;
   font-size: 14px;
+}
+
+.top:hover{
+  background-color: #ffde86;
+  color: #000000;
 }
 
 /* Column container */
@@ -87,7 +91,7 @@ body {
 /* Sidebar/left column */
 .row .side {
   flex: 25%;
-  background-color: #066595;
+  background-color: #fca47c;
   flex: 20%;
   padding: 20px;
 }
@@ -100,7 +104,7 @@ body {
   height: auto;
   box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
   border-radius: 10px;
-  color: white;
+  /* color: white; */
 }
 
 .row .side .aboutMe .myImg img {
@@ -127,7 +131,7 @@ body {
   box-sizing: border-box;
   padding: 10px;
   height: auto;
-  color: white;
+  /* color: white; */
   box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
   border-radius: 10px;
 }
@@ -141,7 +145,7 @@ body {
 
 .row .side .myLinks ul li a {
   text-decoration: none;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .row .side .myLinks ul li a:hover {
@@ -151,9 +155,8 @@ body {
 /* Main column/right column */
 .row .main {
   flex: 75%;
-  padding: 10px;
-  /* background-color: #1abc9c; */
-  background-color: whitesmoke;
+  padding: 30px;
+  background-color: #fff1e7;
 }
 
 .row .main img {
