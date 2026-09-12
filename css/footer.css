@@ -1,0 +1,51 @@
+/* Sticky Footer Base */
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.85);
+    /* Deep slate to match profile variables */
+    backdrop-filter: blur(12px);
+    /* Modern frosted-glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle glowing top border */
+    padding: 16px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Container Structure */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Typography Rules */
+.footer-text {
+    color: #94a3b8;
+    /* --text-muted color */
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/* Interactive Name Link Styling */
+.footer-link {
+    color: #3b82f6;
+    /* --primary-color accent */
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #60a5fa;
+    /* Lighter vivid blue on hover */
+    border-color: #60a5fa;
+}

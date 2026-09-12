@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Load the components script -->
+    <script src="/scripts/components.js" defer></script>
+</head>
+<body>
+  <!-- Reusable Header Custom Tag -->
+    <main-header></main-header>
+
+  <h1>2. JavaScript can change all the HTML attributes in the page</h1>
+  <img id="image" src="img/load-car.gif" width="400" height="400">
+
+  <p>The original image was smily.gif, but the script changed it to fiat.jpg</p>
+
+  <button onclick="loadCarImg()">Click me</button>
+
+  <script>
+    function loadCarImg() {
+      document.getElementById("image").src = "img/fiat.jpg";
+    }
+  </script>
+
+
+   <!-- Reusable Footer Custom Tag -->
+    <main-footer></main-footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DHTML Example</title>
+  <!-- Load the components script -->
+    <script src="/scripts/components.js" defer></script>
+  <style>
+    #message {
+      color: blue;
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    function changeContent() {
+      document.getElementById('message').innerHTML = 'Hello, Dynamic HTML!';
+      document.getElementById('message').style.color = 'red';
+    }
+  </script>
+</head>
+<body>
+  <!-- Reusable Header Custom Tag -->
+    <main-header></main-header>
+
+  <h1>Introduction to DHTML</h1>
+  <p id="message">This is a static message.</p>
+  <button onclick="changeContent()">Change Content</button>
+
+  
+   <!-- Reusable Footer Custom Tag -->
+    <main-footer></main-footer>
+</body>
+</html>

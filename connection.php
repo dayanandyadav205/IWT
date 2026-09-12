@@ -4,12 +4,12 @@ error_reporting(0);
 $hostName = "localhost";
 $dbUser = "root";
 $dbPassword = "";
-$dbName = "responsiveform3";
+$dbName = "user";
 
 $conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName);
 if($conn)
 {
-    // echo "Connection Ok";
+    //  echo "Connection Ok";
 }
 else
 {

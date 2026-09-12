@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Load the components script -->
+    <script src="/scripts/components.js" defer></script>
+
+</head>
+
+<body>
+  <!-- Reusable Header Custom Tag -->
+    <main-header></main-header>
+
+  <h1>8.1 JavaScript can change all the HTML elements in the page</h1>
+  <p id="demo">My Paragraph</p>
+
+  <button onclick='myFunction()'>Click here</button>
+
+  <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "HelloJavaScript!";
+    }
+  </script>
+
+  
+   <!-- Reusable Footer Custom Tag -->
+    <main-footer></main-footer>
+</body>
+
+</html>

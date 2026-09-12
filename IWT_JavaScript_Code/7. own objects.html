@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1">
+  <title>Document</title>
+  <!-- Load the components script -->
+    <script src="/scripts/components.js" defer></script>
+</head>
+
+<body>
+  <!-- Reusable Header Custom Tag -->
+    <main-header></main-header>
+
+  <h1>JavaScript time Objects</h1>
+  <div id="demo"></div>
+  <script>
+    var time = new Date();
+    var hh = time.getHours();
+    var min = time.getMinutes();
+    var ss = time.getSeconds();
+    document.getElementById("demo").innerHTML = "Current Time: " + hh + ":" + min + ":" + ss;
+  </script>
+
+  
+   <!-- Reusable Footer Custom Tag -->
+    <main-footer></main-footer>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+ /* Form Container */
+ .form_container {
+     background: #ffffff;
+     width: 100%;
+     max-width: 450px;
+     padding: 30px;
+     border-radius: 8px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .title {
+     font-size: 24px;
+     font-weight: bold;
+     color: #333333;
+     margin-bottom: 24px;
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ /* Layout and Fields */
+ .form {
+     display: flex;
+     flex-direction: column;
+     gap: 18px;
+ }
+
+ .input_field {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+ }
+
+ /* Labels */
+ .input_field label {
+     font-size: 14px;
+     font-weight: 600;
+     color: #555555;
+ }
+
+ /* Inputs */
+ .input_field .input,
+ .input_field input[type="file"] {
+     width: 100%;
+     padding: 10px 12px;
+     border: 1px solid #cccccc;
+     border-radius: 4px;
+     font-size: 15px;
+     transition: border-color 0.2s ease;
+     outline: none;
+ }
+
+ .input_field .input:focus {
+     border-color: #007bff;
+ }
+
+ /* File Upload Specifics */
+ .input_field input[type="file"] {
+     background: #fafafa;
+     cursor: pointer;
+ }
+
+ /* Inline Checkbox Styling */
+ .input_field input[type="checkbox"] {
+     margin-right: 4px;
+     cursor: pointer;
+ }
+
+ /* Submit Button */
+ /* Container wrapping the submit button */
+ .button_field {
+     width: 100%;
+     display: block;
+     clear: both;
+     position: relative;
+     box-sizing: border-box;
+ }
+
+ /* Submit Button - Cleared of hard overrides */
+ /* Final Specific Fix for the Register Button */
+ .form_container .btn {
+     display: block !important;
+     width: 100% !important;
+     height: auto !important;
+     /* Cancels any circular/fixed height limits */
+     min-height: 45px !important;
+     /* Provides standard button height */
+     background-color: #007bff !important;
+     /* Bright blue background color */
+     color: #ffffff !important;
+     /* White text color */
+     border: none !important;
+     padding: 12px 20px !important;
+     font-size: 16px !important;
+     font-weight: bold !important;
+     border-radius: 4px !important;
+     /* Flat rectangle layout edge */
+     cursor: pointer !important;
+     text-align: center !important;
+     margin-top: 15px !important;
+     box-sizing: border-box !important;
+     /* Ensures proper padding alignment */
+ }
+
+ /* Hover Effect */
+ .form_container .btn:hover {
+     background-color: #0056b3 !important;
+ }
