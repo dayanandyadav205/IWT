@@ -12,7 +12,7 @@
     <div class="footer-container">
         <p class="footer-text">
             &copy; 2023-2026 Designed & Developed by 
-            <a href="/contact.html" class="footer-link">Dayanand Yadav</a>,
+            <a href="/contact.php" class="footer-link">Dayanand Yadav</a>,
             Assistant Professor, Computer Science & Engineering Department, CDGI, Indore
         </p>
     </div>

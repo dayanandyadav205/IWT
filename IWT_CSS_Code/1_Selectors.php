@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="/css/selectors.css">
+</head>
+<body>
+ <?php include '../header.php'; ?>
+
+    <h1>CSS Element Selector</h1>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+    
+    <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+    
+    <p class="p5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+
+    <form>
+        <input type="text" placeholder="User Name"><br/><br/>
+        <input type="password" placeholder="password"><br/> <br/>
+
+        <input type="submit" name="submit">
+    </form>
+
+   <?php include '../footer.php'; ?>
+</body>
+</html>

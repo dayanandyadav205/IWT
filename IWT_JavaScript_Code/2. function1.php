@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Side Scripting Language Example</title>
+ 
+</head>
+<body>
+ <?php include '../header.php'; ?>
+
+  <h1 id="MyHeading">Hello, World!</h1>
+  <button onclick="myFunction()">Change Text</button>
+
+  <script type="text/javaScript" language="javaScript">
+    function myFunction() {
+      document.getElementById("MyHeading").innerHTML = "Hello JavaScript!";
+      document.getElementById("MyHeading").style.color = "cyan";
+    }
+  </script>
+  
+   <?php include '../footer.php'; ?>
+</body>
+</html>

@@ -19,11 +19,12 @@ if (!isset($conn)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/forms.css">
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+   <?php include 'header.php'; ?>
 
    <!-- Form -->
 <div class="form_container">
@@ -66,15 +67,18 @@ if (!isset($conn)) {
 </div>
 
             
-        </div> This closes your .form flex container
+        </div>
     </form>
     <br>
     <p>Already registered? <a href="login_user.php">Click here to Login</a></p>
 </div>
 
-    <?php include 'footer.php'; ?>
+   
 
-    <script>
+     <?php include 'footer.php'; ?>
+</body>
+</html>
+<script>
         // function to check Password
         function checkpwd() {
             var p1 = document.f1.password.value;
@@ -99,9 +103,7 @@ if (!isset($conn)) {
             }
         }
     </script>
-</body>
-</html>
-
+    
 <?php
 if (isset($_POST['register'])) {
     

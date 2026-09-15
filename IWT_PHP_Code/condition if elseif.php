@@ -4,14 +4,10 @@
 <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
- <!-- Load the components script -->
-    <script src="/components.js" defer></script>
 </head>
 <body>
+ <?php include '../header.php'; ?>
 
-    <!-- Reusable Header Custom Tag -->
-    <main-header></main-header>
     <h1>php if else</h1>
   <?php
   $marks = 80;
@@ -27,8 +23,8 @@
   ?>
 
   
-  <!-- Reusable Footer Custom Tag -->
-    <main-footer></main-footer>
+
+ <?php include '../footer.php'; ?>
 </body>
 
 </html>

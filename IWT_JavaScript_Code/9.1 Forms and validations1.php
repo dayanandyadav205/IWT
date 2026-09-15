@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<head>
+  <script>
+    function validateForm() {
+      let x = document.getElementById("fname").value;
+      if (x === "") {
+        document.getElementById('alert').innerHTML = "*Name must be filled out";
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+   <?php include '../header.php'; ?>
+
+  <h2>JavaScript Validation</h2>
+  <form action="#" onsubmit="return validateForm()">
+
+    Name: <input type="text" id="fname" pattern="[A-Za-z]+" title="Please enter only alphabets"><br><br>
+
+    <span id="alert" style="color: red;"></span>
+
+    <input type="submit" value="Submit"><br>
+  </form>
+
+  
+ <?php include '../footer.php'; ?>
+</body>
+
+</html>

@@ -67,42 +67,25 @@
  }
 
  /* Submit Button */
- /* Container wrapping the submit button */
- .button_field {
-     width: 100%;
-     display: block;
-     clear: both;
-     position: relative;
+ .btn {
+     /* Reset layout behaviors */
+     display: inline-block;
      box-sizing: border-box;
- }
 
- /* Submit Button - Cleared of hard overrides */
- /* Final Specific Fix for the Register Button */
- .form_container .btn {
-     display: block !important;
-     width: 100% !important;
-     height: auto !important;
-     /* Cancels any circular/fixed height limits */
-     min-height: 45px !important;
-     /* Provides standard button height */
-     background-color: #007bff !important;
-     /* Bright blue background color */
-     color: #ffffff !important;
-     /* White text color */
-     border: none !important;
-     padding: 12px 20px !important;
-     font-size: 16px !important;
-     font-weight: bold !important;
-     border-radius: 4px !important;
-     /* Flat rectangle layout edge */
-     cursor: pointer !important;
-     text-align: center !important;
-     margin-top: 15px !important;
-     box-sizing: border-box !important;
-     /* Ensures proper padding alignment */
- }
+     /* FIX THE SHAPE: Ensure width grows with text and height fits comfortably */
+     width: auto;
+     height: auto;
 
- /* Hover Effect */
- .form_container .btn:hover {
-     background-color: #0056b3 !important;
+     /* FIX THE TEXT OVERFLOW: Add padding inside the button */
+     padding: 10px 24px;
+
+     /* FIX THE CIRCLE: Change border-radius from 50% to a small pixel value */
+     border-radius: 4px;
+
+     /* Basic visual cleanup (adjust colors as you like) */
+     background-color: #333;
+     color: #fff;
+     font-size: 16px;
+     border: none;
+     cursor: pointer;
  }

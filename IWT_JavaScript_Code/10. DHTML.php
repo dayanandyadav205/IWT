@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DHTML Example</title>
+
+  <style>
+    #message {
+      color: blue;
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    function changeContent() {
+      document.getElementById('message').innerHTML = 'Hello, Dynamic HTML!';
+      document.getElementById('message').style.color = 'red';
+    }
+  </script>
+</head>
+<body>
+ <?php include '../header.php'; ?>
+
+  <h1>Introduction to DHTML</h1>
+  <p id="message">This is a static message.</p>
+  <button onclick="changeContent()">Change Content</button>
+
+  
+    <?php include '../footer.php'; ?>
+</body>
+</html>

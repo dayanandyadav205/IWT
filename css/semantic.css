@@ -94,7 +94,7 @@
 }
 
 /* main content CSS */
-.main {
+.content {
     display: flex;
 }
 
@@ -117,7 +117,7 @@
     border-radius: 50%;
 }
 
-.main .aside img {
+.content .aside img {
     height: 100px;
     width: 100px;
 }
@@ -127,18 +127,18 @@
     line-height: 50px;
 }
 
-.main .content {
+.content .main  {
     background-color: lightseagreen;
     flex: 75%;
     padding: 20px;
 }
 
-.main .content img {
+.content .main  img {
     height: 300px;
     width: 600px;
 }
 
-.main .content .semantic img {
+.content .main .semantic img {
     height: 800px;
     width: 600px;
 }

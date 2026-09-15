@@ -11,7 +11,7 @@ if($data)
 
 ?>
 
-    <meta http-equiv="refresh" content="0;url = http://localhost/web_development/display_admin.php"/>
+    <meta http-equiv="refresh" content="0;url = /display_admin.php"/>
 
 <?php
 }

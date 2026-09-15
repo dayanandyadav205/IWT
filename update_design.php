@@ -36,6 +36,7 @@ $language1  = explode(",", $language)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User Details</title>
+    <link rel="stylesheet" href="/css/forms.css">
     
 </head>
 <body>

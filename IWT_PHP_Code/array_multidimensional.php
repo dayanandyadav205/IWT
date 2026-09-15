@@ -4,13 +4,10 @@
 <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- Load the components script -->
-  <script src="/scripts/components.js" defer></script>
+
 </head>
 <body>
-
-    <!-- Reusable Header Custom Tag -->
-    <main-header></main-header>
+   <?php include '../header.php'; ?>
 
 <h1>PHP - Multidimensional Array</h1>
 <?php
@@ -29,7 +26,6 @@ echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";
 ?>
 
 
-  <!-- Reusable Footer Custom Tag -->
-    <main-footer></main-footer>
+  <?php include '../footer.php'; ?>
 </body>
 </html>

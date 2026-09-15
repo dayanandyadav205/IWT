@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+<body>
+   <?php include '../header.php'; ?>
+
+  <h1>3. JavaScript can change all the CSS styles in the page</h1>
+
+  <button type="button" onclick="myFunction1()">Click Me!</button>
+  <button type="button" onclick="myFunction2()">Click Me!</button>
+
+  <br><br>
+
+  <div id="myDiv">
+    <h1 id="id1"></h1>
+    <img id="myImg" src="" alt="">
+  </div>
+
+  <script>
+    function myFunction1() {
+      document.getElementById('myDiv').style.width = '500px';
+      document.getElementById('myDiv').style.height = '500px';
+      document.getElementById('myDiv').style.border = '5px solid red';
+      document.getElementById('id1').innerHTML = "<h1>My div</h1>";
+      document.getElementById('id1').style.color = 'blue';
+    }
+
+    function myFunction2() {
+      document.getElementById('myImg').src = "img/smily.gif";
+    }
+
+  </script>
+
+
+    <?php include '../footer.php'; ?>
+</body>
+
+</html>

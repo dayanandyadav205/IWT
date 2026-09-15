@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  </head>
+<body>
+ <?php include '../header.php'; ?>
+
+<h1>HTML DOM Events</h1>
+<h2>The onmousedown Event</h2>
+
+<p>Clock the text below!</p>
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+The <b>mouseDown()</b> function sets the color of this text to red.
+The <b>mouseUp()</b> function sets the color of this text to blue.
+</p>
+
+<script>
+function mouseDown() {
+  document.getElementById("myP").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("myP").style.color = "blue";
+}
+</script>
+
+
+    <?php include '../footer.php'; ?>
+</body>
+</html>
