@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Home</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/index.css">
-  <!-- Added Font Awesome for social and resource icons to display correctly -->
-  <link rel="stylesheet" href="https://cloudflare.com">
-  <script src="/scripts/slider.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="css/index.css">
 </head>
+<body>
+  <?php include 'header.php'; ?>
 
-<body id="home-layout">
-   <?php include 'header.php'; ?>
-
-  <!-- The flexible grid (content) -->
+  <!-- Main Content Wrapper -->
   <div class="content">
-    <div class="main">
-    <div class="slider-container">
-  <div class="slider-wrapper">
-    <div class="slide"><img src="/images/1.jpg" alt="Slide 1"></div>
-    <div class="slide"><img src="/images/2.jpg" alt="Slide 2"></div>
-    <div class="slide"><img src="/images/3.jpg" alt="Slide 3"></div>
-    <div class="slide"><img src="/images/4.jpg" alt="Slide 4"></div>
-    <div class="slide"><img src="/images/5.jpg" alt="Slide 5"></div>
-  </div>
-  <button class="btn prev-btn" aria-label="Previous slide">❮</button>
-  <button class="btn next-btn" aria-label="Next slide">❯</button>
-</div>
-</div>
+    
+    <!-- 1. MAIN AREA (Contains the Slider) -->
+    <main class="main">
+      <div class="slider">
+        
+        <!-- Image Container -->
+        <div class="img-box">
+          <img class="slider-img" src="images/1.jpg" alt="Slider Image">
+        </div>
+        
+        <!-- Slider Controls -->
+        <div style="text-align: center;">
+          <button class="btn" onclick="prev()">Previous</button>
+          <button class="btn" onclick="next()">Next</button>
+        </div>
 
+      </div>
+    </main>
 
-    <div class="aside">
+    <!-- 2. ASIDE AREA (Sidebar) -->
+    <aside class="aside">
+      
       <!-- About Me Card -->
       <div class="aboutMe">
-        <div class="myImg">
-          <img src="/images/dayanand.jpg" alt="Dayanand Yadav Picture" />
-        </div>
-        <div class="myIntro">
-          <h3>About Me</h3>
-          <p>I am Dayanand Yadav, working as an Assistant Professor in Computer Science & Engineering Department in Chameli Devi Group of Institutions, Indore.</p>
-        </div>
+        <p class="title">Developer's Profile</p>
+            <!-- 1. Header & Photo -->
+            <img src="/images/dayanand.jpg" alt="Dayanand Yadav" class="profile-avatar">
+            <h3>Dayanand Yadav</h3>
+            <p class="title">Assistant Professor</p>
+            <p class="institution">Computer Science & Engineering Department</p>
+            <p class="institution">Chameli Devi Group of Institutions, Indore</p>
+
+            <!-- 2. Contact Details -->
+            <div class="profile-details">
+                <p><strong>Personal Mail:</strong> dayanandyadav205@gmail.com</p>
+                <p><strong>Official Mail:</strong> dayanand.yadav@cdgi.edu.in</p>
+                <p><strong>Mobile:</strong> 099260-79083</p>
+            </div>
+
+      <!-- Links Card -->
+      <div class="myLinks">
+        <h3>Connect With Me</h3>
+        <div class="link-buttons">
+            <!-- GitHub Icon -->
+            <a href="https://github.com/dayanandyadav205" target="_blank" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
       </div>
 
-      <!-- Social & Resource Links Card -->
-      <div class="myLinks">
-        <h3>My Links</h3>
-        <div class="link-buttons">
-          <a href="https://github.com/dayanandyadav205/CRT" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/dayanandyadav205" target="_blank" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://www.w3.org/" target="_blank" aria-label="W3C">
-            <i class="fa-brands fa-w3c"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+    </aside>
+
   </div>
 
-  <?php include 'footer.php'; ?>
+  <!-- Link to your JavaScript file -->
+  <script src="scripts/slider.js"></script>
+
+    <?php include 'footer.php'; ?>
 </body>
 </html>

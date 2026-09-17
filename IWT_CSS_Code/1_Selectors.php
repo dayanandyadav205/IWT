@@ -4,7 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selectors</title>
-    <link rel="stylesheet" href="/css/selectors.css">
+
+    <style>
+         h1{
+            background-color: red;
+            color: white;
+        }
+
+        p{
+            color: navy;
+        }
+
+        #p3{
+            color: red;
+        }
+
+        .p5{
+            color:#ff9900;
+        }
+
+        input[type="text"]{
+            background-color: red;
+            color:white;
+        }
+
+        input[type="submit"]:hover{
+            background-color: green;
+            color: white;
+        }
+    </style>
 </head>
 <body>
  <?php include '../header.php'; ?>

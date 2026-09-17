@@ -5,66 +5,42 @@
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>  
-    <nav class="navbar">
-        <!-- Logo/Brand -->
-        <div class="logo">
-            <img src="/images/iwt5.jpg" alt="IWT5">
-        </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">IWT5</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/index.php">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> HTML <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="/IWT_HTML_Code/semantic.php" target="_self">Semantic HTML</a></li>
+            <li><a href="/IWT_HTML_Code/headings.php" target="_self">Headings</a></li>
+            <li><a href="/IWT_HTML_Code/lists.php" target="_self">Lists</a></li>
+            <li><a href="/IWT_HTML_Code/media_elements.php" target="_self">Media Elements</a></li>
+            <li><a href="/IWT_HTML_Code/paragraph_formatting.php" target="_self">Paragraph Formatting</a></li>
+            <li><a href="/IWT_HTML_Code/table.php" target="_self">Table</a></li>
+          </ul>
+        </li>
 
-        <!-- Hidden Checkbox Toggle for Main Menu -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-        <!-- Hamburger Menu Icon -->
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li class="active"><a href="/index.php" style="color: white;;" target="_self"><i class="fa-solid fa-house"></i> Home</a>
-            </li>
-
-            <!-- Dropdown Trigger Container -->
-            <li class="dropdown">
-                <!-- Hidden Checkbox for Mobile Submenu -->
-                <input type="checkbox" id="sub-toggle" class="sub-toggle">
-
-                <!-- Label acts as the toggle trigger -->
-                <label for="sub-toggle" class="dropdown-trigger">
-                    HTML <span class="arrow">&#9662;</span>
-                </label>
-
-                <!-- Dropdown Content -->
-                <ul class="dropdown-menu">
-                    <li><a href="/IWT_HTML_Code/headings.php" target="_self">Headings</a></li>
-                    <li><a href="/IWT_HTML_Code/lists.php" target="_self">Lists</a></li>
-                    <li><a href="/IWT_HTML_Code/media_elements.php" target="_self">Media Elements</a></li>
-                    <li><a href="/IWT_HTML_Code/paragraph_formatting.php" target="_self">Paragraph Formatting</a></li>
-                    <li><a href="/IWT_HTML_Code/table.php" target="_self">Table</a></li>
-                    <li><a href="/IWT_HTML_Code/semantic.php" target="_self">Semantic Layout</a></li>
-                </ul>
-            </li>
-
-            <!-- Dropdown Trigger Container -->
-            <li class="dropdown">
-                <!-- Hidden Checkbox for Mobile Submenu -->
-                <input type="checkbox" id="sub-toggle" class="sub-toggle">
-
-                <!-- Label acts as the toggle trigger -->
-                <label for="sub-toggle" class="dropdown-trigger">
-                    CSS <span class="arrow">&#9662;</span>
-                </label>
-
-                <!-- Dropdown Content -->
-                <ul class="dropdown-menu">
-                    <li><a href="/IWT_CSS_Code/1_Selectors.php" target="_self">Selectors</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> CSS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+             <li><a href="/IWT_CSS_Code/1_Selectors.php" target="_self">Selectors</a></li>
                     <li><a href="/IWT_CSS_Code/2_bg_images.php" target="_self">Background Images</a></li>
                     <li><a href="/IWT_CSS_Code/3_colours_and_properties.php" target="_self">Colors</a></li>
                     <li><a href="/IWT_CSS_Code/4_manipulating_texts.php" target="_self">Texts</a></li>
@@ -76,22 +52,13 @@
                     <li><a href="/IWT_CSS_Code/7.4_positioning_relative.php" target="_self">Position Relative</a></li>
                     <li><a href="/IWT_CSS_Code/7.5_positioning_absolute.php" target="_self">Position Absolute</a></li>
                     <li><a href="/IWT_CSS_Code/8_google_fonts.php" target="_self">Google Fonts</a></li>
-                </ul>
-            </li>
+          </ul>
+        </li>
 
-            <!-- Dropdown Trigger Container -->
-            <li class="dropdown">
-                <!-- Hidden Checkbox for Mobile Submenu -->
-                <input type="checkbox" id="sub-toggle" class="sub-toggle">
-
-                <!-- Label acts as the toggle trigger -->
-                <label for="sub-toggle" class="dropdown-trigger">
-                    JavaScript <span class="arrow">&#9662;</span>
-                </label>
-
-                <!-- Dropdown Content -->
-                <ul class="dropdown-menu">
-                    <li><a style="font-weight: bold;">JavaScript Applications</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> JavaScript <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="font-weight: bold;">JavaScript Applications</a></li>
                     <li><a href="/IWT_JavaScript_Code/week3_rps.php" target="_self">RPS Game</a>
                     </li>
                     <li><a href="/IWT_JavaScript_Code/week3_simple_quiz.php" target="_self">Simple Quiz</a>
@@ -141,23 +108,13 @@
                     <li><a href="/IWT_JavaScript_Code/11.2 onsubmit events.php" target="_self">11.2 Event onsubmit</a></li>
                     <li><a href="IWT_JavaScript_Code/11.3 onmouseup & onmousedown event.php" target="_self">11.3 Event onmouseup &
                             onmousedown</a></li>
-                </ul>
-            </li>
+          </ul>
+        </li>
 
-
-            <!-- Dropdown Trigger Container -->
-            <li class="dropdown">
-                <!-- Hidden Checkbox for Mobile Submenu -->
-                <input type="checkbox" id="sub-toggle" class="sub-toggle">
-
-                <!-- Label acts as the toggle trigger -->
-                <label for="sub-toggle" class="dropdown-trigger">
-                    PHP <span class="arrow">&#9662;</span>
-                </label>
-
-                <!-- Dropdown Content -->
-                <ul class="dropdown-menu">
-                    <li><a href="/IWT_PHP_Code/array_associative.php" target="_self">PHP Associative Array</a></li>
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> PHP <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="/IWT_PHP_Code/array_associative.php" target="_self">PHP Associative Array</a></li>
                     <li><a href="/IWT_PHP_Code/array_indexed.php" target="_self">PHP Indexed Array</a></li>
                     <li><a href="/IWT_PHP_Code/array_multidimensional.php" target="_self">PHP Multidimensional Array</a></li>
                     <li><a href="/IWT_PHP_Code/browser_detection1.php" target="_self">Browser Detection 1</a></li>
@@ -175,18 +132,21 @@
                     <li><a href="/IWT_PHP_Code/loop foreach.php" target="_self">PHP foreach loop</a></li>
                     <li><a href="/IWT_PHP_Code/loop while.php" target="_self">PHP while loop</a></li>
                     <li><a href="/IWT_PHP_Code/strings.php" target="_self">PHP strings</a></li>
-                </ul>
-            </li>
+                </li>
+          </ul>
+        </li>
 
+      </ul>
 
-            <li><a href="/form.php" target="_self"><i class="fa-solid fa-user-plus"></i></i></span> Sign Up</a></li>
-            <li><a href="/login_user.php" target="_self"><i class="fa-solid fa-user-gear"></i> User Login</a></li>
-            <li><a href="/login_admin.php" target="_self"><i class="fa-solid fa-user-shield"></i> Admin Login</a></li>
-            <li><a href="/contact.php" target="_self"><i class="fa-solid fa-phone"></i></i> Contact Us</a></li>
-
-
-        </ul>
-    </nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="form.php"><span class="glyphicon glyphicon-user"> </span> Sign Up</a></li>
+        <li><a href="login_user.php"><span class="glyphicon glyphicon-log-in"></span> User Login</a></li>
+        <li><a href="login_admin.php"><span class="glyphicon glyphicon-log-in"></span> User Admin</a></li>
+         <li><a href="/contact.php" target="_self"><span class="glyphicon glyphicon-contact"></span> Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 </body>
 
