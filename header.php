@@ -11,6 +11,8 @@
 </head>
 
 <body>  
+  
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -135,18 +137,19 @@
                 </li>
           </ul>
         </li>
-
       </ul>
 
+<!-- Right Aligned items -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="form.php"><span class="glyphicon glyphicon-user"> </span> Sign Up</a></li>
-        <li><a href="login_user.php"><span class="glyphicon glyphicon-log-in"></span> User Login</a></li>
-        <li><a href="login_admin.php"><span class="glyphicon glyphicon-log-in"></span> User Admin</a></li>
+        <li><a href="/form.php"><span class="glyphicon glyphicon-user"> </span> Sign Up</a></li>
+        <li><a href="/login_user.php"><span class="glyphicon glyphicon-log-in"></span> User Login</a></li>
+        <li><a href="/login_admin.php"><span class="glyphicon glyphicon-log-in"></span> Admin Login</a></li>
          <li><a href="/contact.php" target="_self"><span class="glyphicon glyphicon-contact"></span> Contact Us</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 </body>
 

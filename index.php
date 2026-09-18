@@ -11,7 +11,7 @@
   <?php include 'header.php'; ?>
 
   <!-- Main Content Wrapper -->
-  <div class="content">
+  <div class="content" id="files">
     
     <!-- 1. MAIN AREA (Contains the Slider) -->
     <main class="main">

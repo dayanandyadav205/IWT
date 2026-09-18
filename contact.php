@@ -14,9 +14,9 @@
     <!-- Main Section -->
     <div style="padding:20px">
         <div>
-            <p>Developer's Profile</p>
+             <h2>Contact Us</h2>
             <!-- 1. Header & Photo -->
-            <img src="/images/dayanand.jpg" alt="Dayanand Yadav" style="border-radius: 50%">
+            <!-- <img src="/images/dayanand.jpg" alt="Dayanand Yadav" style="border-radius: 50%"> -->
             <h3>Dayanand Yadav</h3>
             <p>Assistant Professor</p>
             <p>Computer Science & Engineering Department</p>
