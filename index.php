@@ -11,7 +11,7 @@
   <?php include 'header.php'; ?>
 
   <!-- Main Content Wrapper -->
-  <div class="content" id="files">
+  <div class="content">
     
     <!-- 1. MAIN AREA (Contains the Slider) -->
     <main class="main">
@@ -46,26 +46,16 @@
 
             <!-- 2. Contact Details -->
             <div class="profile-details">
-                <p><strong>Personal Mail:</strong> dayanandyadav205@gmail.com</p>
-                <p><strong>Official Mail:</strong> dayanand.yadav@cdgi.edu.in</p>
-                <p><strong>Mobile:</strong> 099260-79083</p>
+               <!-- Contact Information -->
+        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+            <li><strong>My Website:</strong> <a href="https://www.iwt5.in" target="_blank">www.iwt5.in</a></li>
+            <li><strong>Personal Mail 1:</strong> <a href="mailto:dayanand.yadav@iwt5.in">dayanand.yadav@iwt5.in</a></li>
+            <li><strong>Personal Mail 2:</strong> <a href="mailto:dayanandyadav205@gmail.com">dayanandyadav205@gmail.com</a></li>
+            <li><strong>Official Mail:</strong> <a href="mailto:dayanand.yadav@cdgi.edu.in">dayanand.yadav@cdgi.edu.in</a></li>
+            <li><strong>Mobile:</strong> <a href="tel:09926079083">099260-79083</a></li>
+        </ul>
             </div>
-
-      <!-- Links Card -->
-      <div class="myLinks">
-        <h3>Connect With Me</h3>
-        <div class="link-buttons">
-            <!-- GitHub Icon -->
-            <a href="https://github.com/dayanandyadav205" target="_blank" title="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            
-            <!-- LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank" title="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-          </div>
-      </div>
+       </div>
 
     </aside>
 
