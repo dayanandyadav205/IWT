@@ -188,6 +188,9 @@ body {
    Mobile/Tablet Media Queries (Screens under 768px widths)
    ========================================================================== */
 @media (max-width: 767px) {
+    header{
+        font-size:50%;
+    }
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
@@ -257,6 +260,8 @@ body {
 <body>  
  <header>
         <h1>Internet & Web Technology</h1>
+        <h2>B.Tech, CSE</h2>
+        <h3>V Semester</h3>
     </header>
 <nav class="navbar">
   <div class="nav-container">
