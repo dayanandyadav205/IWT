@@ -95,12 +95,10 @@ $language1  = explode(",", $language)
 <?php
 if ($_POST['update']) 
     {
-        
         $fname           = $_POST['fname'];
         $lname           = $_POST['lname'];
         $pwd             = $_POST['password'];
         $cpwd            = $_POST['cpassword'];
-      
         $email           = $_POST['email'];
 
     $query = "UPDATE form set fname='$fname',lname='$lname',password='$pwd',cpassword='$cpwd',
@@ -112,9 +110,7 @@ if ($_POST['update'])
         {
         echo "<script >alert('Record Updated')</script>";
         ?>
-
             <meta http-equiv="refresh" content="0;url = /display_admin.php"/>
-
         <?php
         } 
     else 

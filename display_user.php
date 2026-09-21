@@ -17,7 +17,6 @@ echo "Welcome " . $_SESSION['user_name'];
 <body>
  <?php include 'header.php'; ?>
 
-
         <?php
         include("connection.php");
         error_reporting(0);
@@ -35,9 +34,8 @@ echo "Welcome " . $_SESSION['user_name'];
 
         $total = mysqli_num_rows($data);
         // $result = mysqli_fetch_assoc($data);
-        
         // echo $result;
-// echo $total;
+        // echo $total;
         
         if ($total != 0) {
             ?>
@@ -46,22 +44,17 @@ echo "Welcome " . $_SESSION['user_name'];
             <table border="3" cellspacing="5" width="90%">
                 <tr>
                     <th width="5%">id</th>
-                   
                     <th width="8%">First Name</th>
                     <th width="8%">Last Name</th>
-                    
                     <th width="10%">Email</th>
-                    
                 </tr>
 
                 <?php
                 while ($result = mysqli_fetch_assoc($data)) {
                     echo "<tr>
                 <td>" . $result['id'] . "</td>
-                
                 <td>" . $result['fname'] . "</td>
                 <td>" . $result['lname'] . "</td>
-               
                 <td>" . $result['email'] . "</td>
                 
           </tr>
@@ -74,11 +67,11 @@ echo "Welcome " . $_SESSION['user_name'];
         ?>
         </table>
 
+        <br>
+<a href="logout.php"><input type="submit" name="" value="Logout" class="btn_logout"></a>
 
      <?php include 'footer.php'; ?>
 
 </body>
-
-<a href="logout.php"><input type="submit" name="" value="Logout" class="btn_logout"></a>
 
 </html>
