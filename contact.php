@@ -11,7 +11,6 @@
 
     <?php include 'header.php'; ?>
 
-    <main>
         <h2>Contact Us</h2>
         
         <!-- Profile Overview -->
@@ -34,7 +33,6 @@
             <a href="https://github.com/dayanandyadav205" aria-label="GitHub" style="margin-right: 15px;"><i class="fa-brands fa-github fa-lg"></i></a>
             <a href="https://www.linkedin.com/in/dayanandyadav205/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin fa-lg"></i></a>
         </div>
-    </main>
 
     <?php include 'footer.php'; ?>
 
