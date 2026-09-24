@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responsive Collapse Navigation Header</title>
-<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
 
     </style>
 </head>
@@ -134,7 +134,7 @@
 
       <!-- Right Aligned Items -->
       <ul class="nav-menu nav-right">
-        <li class="nav-item"><a href="/form.php">Sign Up</a></li>
+        <li class="nav-item"><a href="/form.php">Register</a></li>
         <li class="nav-item"><a href="/login_user.php">User Login</a></li>
         <li class="nav-item"><a href="/login_admin.php">Admin Login</a></li>
         <li class="nav-item"><a href="/contact.php">Contact Us</a></li>

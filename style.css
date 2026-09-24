@@ -36,11 +36,10 @@ header {
 }
 
 
-
 /* Mobile-First Navigation (Vertical stacked menu) */
 /* General Desktop Styles */
 body {
-    margin: 0;
+    margin: 20px;
     font-family: Arial, sans-serif;
     padding: 20px;
 }
@@ -260,10 +259,8 @@ body {
 }
 
 
-
+/* ========================================================================= */
 /* Home page CSS index.php */
-/* Base styles and clean-up */
-
 /* Mobile-First Main Container (Stacked Layout) */
 main {
     display: flex;
@@ -387,9 +384,7 @@ aside {
     }
 }
 
-
-
-
+/* =========================================================================================== */
 /* Forms CSS signup, login */
  /* Form Container */
  .form_container {
@@ -482,3 +477,13 @@ aside {
      border: none;
      cursor: pointer;
  }
+
+/* ===================================================================== */
+ /* footer CSS */
+ footer {
+            background-color: #1a1a24;
+            color: #ccc;
+            text-align: center;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
