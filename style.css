@@ -1,481 +1,280 @@
-/* Header CSS header.php */
-/* Base styles and clean-up */
+/* ========================================================================= */
+/* 1. Base Styles and Clean-up */
+/* ========================================================================= */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #d5f4e6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #d5f4e6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Semantic Block Stylings */
-header,
-nav,
-main,
-footer,
-article,
-section,
-aside {
-    padding: 1.5rem;
-    border-radius: 6px;
-}
-
+/* ========================================================================= */
+/* 2. Header & Navigation (Desktop Default) */
+/* ========================================================================= */
 header {
-    /* background-color: #fefbd8; */
-    /* color: #fff; */
-    text-align: center;
-    margin-bottom: 0.5rem;
+  background-color: #d5f4e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 31px;
 }
 
-
-/* Mobile-First Navigation (Vertical stacked menu) */
-/* General Desktop Styles */
-body {
-    /* margin: 20px; */
-    font-family: Arial, sans-serif;
-    /* padding: 20px; */
+header h1, h2, h3{
+  text-align: center;
 }
 
-.navbar {
-    background-color: #618685;
-    /* border-color: #080808; */
-    border-radius: 4px;
+header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 0 15px; */
-    position: relative;
+/* Navigation bar */
+nav {
+  background: #618685;
+  padding: 0 1rem;
 }
 
-.navbar-collapse {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+/* Desktop Navigation (Defaults) */
+nav ul {
+  display: flex;
+  list-style: none;
+  transition: max-height 0.3s ease-in-out;
 }
 
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
+nav li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1.5rem;
 }
 
-.nav-item>a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.2s, color 0.2s;
+nav li a:hover {
+  background-color: #d5f4e6;
+  color: #333;
 }
 
-.nav-item>a:hover {
-    background-color: #fefbd8;
-    color: black;
-}
-
-.caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 5px;
-    vertical-align: middle;
-    border-top: 4px dashed;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-}
-
-/* Desktop Hover Dropdown */
+/* Dropdown menu */
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    list-style: none;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #618685;
+  list-style: none;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 180px;
+  z-index: 10;
 }
 
 .dropdown-menu li a {
-    display: block;
-    padding: 3px 20px;
-    color: #333;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1.42;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
 }
 
-.dropdown-menu li a:hover {
-    color: white;
-    background-color: #618685;;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
-
-.dropdown-large {
-    max-height: 400px;
-    overflow-y: auto;
-    min-width: 280px;
-}
-
-.dropdown-header {
-    display: block;
-    padding: 3px 20px;
-    font-size: 12px;
-    color: #777;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.dropdown-divider {
-    height: 1px;
-    margin: 9px 0;
-    background-color: #e5e5e5;
-}
-
-.navbar-toggle {
-    display: none;
-    background-color: transparent;
-    border: 1px solid #333;
-    border-radius: 4px;
-    padding: 9px 10px;
-    margin: 8px 0;
-    cursor: pointer;
-}
-
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: #fff;
-    border-radius: 1px;
-}
-
-.navbar-toggle .icon-bar+.icon-bar {
-    margin-top: 4px;
-}
-
-/* ==========================================================================
-   Mobile/Tablet Media Queries (Screens under 768px widths)
-   ========================================================================== */
-@media (max-width: 767px) {
-    header {
-        font-size: 50%;
-    }
-
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px 15px;
-    }
-
-    .navbar-toggle {
-        display: block;
-        align-self: flex-end;
-    }
-
-    .navbar-collapse {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding-bottom: 10px;
-    }
-
-    .navbar-collapse.show {
-        display: flex;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-item>a {
-        padding: 12px 0;
-        border-bottom: 1px solid #333;
-        background-color: #618685;
-        color: white;
-    }
-
-    /* Hidden on mobile initially, displays inline instead of absolute float */
-    .dropdown-menu {
-        position: static;
-        display: none;
-        /* Submenu closed by default now */
-        float: none;
-        /* background-color: #333; */
-        box-shadow: none;
-        border: none;
-        margin: 0;
-        padding: 5px 0 5px 15px;
-    }
-
-    /* Reveal child items when parent element is toggled to '.open' via JS */
-    .nav-item.dropdown.open .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-menu li a {
-        color: #9d9d9d;
-        padding: 8px 10px;
-    }
-
-    .dropdown-menu li a:hover {
-        color: #fff;
-        background-color: #618685;;
-    }
-
-    .dropdown-large {
-        max-height: 300px;
-        overflow-y: auto;
-    }
-}
-
 
 /* ========================================================================= */
-/* Home page CSS index.php */
-/* Mobile-First Main Container (Stacked Layout) */
+/* 3. Main Layout Structure (Desktop Default) */
+/* ========================================================================= */
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    flex: 1;
-    /* Pushes footer to the bottom */
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #d5f4e6;
+  display: flex;
+  flex-direction: row; 
+  gap: 1.5rem;
+  /* max-width: 1200px; */
+  width: 99%;
+  /* margin: 0 auto; */
+  padding: 1rem;
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+aside {
+  background-color: #618685;
+  color: whitesmoke;
+  flex: 0 0 20%; /* Sidebar takes roughly 1/4 width */
+  padding: 20px;
+  border-radius: 4px;
+}
+
+main content {
+  background-color: #d5f4e6;
+  flex: 0 0 80%; /* Content takes roughly 3/4 width */
 }
 
 article,
 section {
-    
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: white;
+  padding: 20px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
 }
 
-aside {
-    background-color: #618685;
-    color: white;
-    
+/* ========================================================================= */
+/* 4. Internal Components & Modules */
+/* ========================================================================= */
+aside .aboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+  text-align: justify;
+  align-items: center;
 }
 
-
-/* --- RESPONSIVE DESKTOP LAYOUT --- */
-/* Triggers automatically on screens wider than 768px (Tablets / Desktops) */
-@media (min-width: 768px) {
-
-    /* Shift navigation to horizontal navbar row */
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    nav a {
-        background-color: transparent;
-        padding: 0;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    /* Shift main into a multi-column row using CSS Flexbox layout grid */
-    main {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    /* Tech card CSS */
-    /* Container using Flexbox for a responsive card grid */
-    .tech-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        background-color: #f9f9f9;
-    }
-
-    /* Individual Card Design */
-    .tech-card {
-        background: #ffffff;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        width: 300px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s ease;
-    }
-
-    /* Card hover animation */
-    .tech-card:hover {
-        transform: translateY(-5px);
-    }
-
-    /* Forces image to scale uniformly inside its container */
-    .tech-image img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        /* Crops image without distortion */
-        display: block;
-    }
-
-    /* Inner card text padding and styling */
-    .tech-content {
-        padding: 15px;
-    }
-
-    .tech-content h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-        color: #333333;
-        font-size: 1.2rem;
-    }
-
-    .tech-content p {
-        color: #666666;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        margin: 0;
-    }
-
-
-    /* Left/Center Main content wrapper (takes up 75% width) */
-    .content-area {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    /* Sidebar column (takes up 25% width) */
-    aside {
-        flex: 1;
-        position: sticky;
-        top: 1rem;
-        /* Sticks sidebar on scroll if page is long */
-    }
+aside .aboutMe img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
 }
 
-/* =========================================================================================== */
-/* Forms CSS signup, login */
-/* Form Container */
+.myLinks ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+main content img {
+  max-width: 100%;
+  height: auto; /* Responsive images */
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Forms & UI Elements */
 .form_container {
-    background: #618685;;
-    width: 100%;
-    max-width: 450px;
-    padding: 30px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 500px;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333333;
-    margin-bottom: 24px;
+.input,
+.btn{
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn,{
+  background-color: rgb(42, 41, 41);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todoContainer {
+  padding: 30px;
+  background-color: lightsalmon;
+  max-width: 100%;
+  width: 700px;
+  margin: 20px auto;
+}
+
+.todoContainer input {
+  height: 40px;
+  width: 70%;
+}
+
+.todoContainer .btnaddItem {
+  height: 40px;
+  width: 25%;
+}
+
+.topBtn {
+  background-color: rgb(236, 58, 9);
+  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.topBtn a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Mobile Layout Adjustments (Inside your @media (max-width: 768px) block) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-}
+    gap: 10px;
+    padding: 20px;
+  }
 
-/* Layout and Fields */
-.form {
-    display: flex;
+  header h1, header h2 {
+    font-size: 20px;
+  }
+
+  header img {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  nav ul {
     flex-direction: column;
-    gap: 18px;
-}
-
-.input_field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-/* Labels */
-.input_field label {
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
-}
-
-/* Inputs */
-.input_field .input,
-.input_field input[type="file"] {
+    text-align: center;
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 15px;
-    transition: border-color 0.2s ease;
-    outline: none;
+  }
+
+  nav li a {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  /* Dropdown Menu updates for Mobile Accordion feel */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: #1a1a24;
+    color: #f7fafc;
+  }
+
+  /* Keeps the dropdown hidden on mobile unless explicitly interacting */
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+  main {
+    flex-direction: column; /* Stacks aside and content vertically */
+    padding: 10px;
+  }
+
+  aside, main content {
+    flex: 1 1 100%; /* Spans full width on mobile screen */
+    width: 100%;
+  }
 }
 
-.input_field .input:focus {
-    border-color: #007bff;
-}
 
-/* Submit Button */
-.btn {
-    /* Reset layout behaviors */
-    display: inline-block;
-    box-sizing: border-box;
-
-    /* FIX THE SHAPE: Ensure width grows with text and height fits comfortably */
-    width: auto;
-    height: auto;
-
-    /* FIX THE TEXT OVERFLOW: Add padding inside the button */
-    padding: 10px 24px;
-
-    /* FIX THE CIRCLE: Change border-radius from 50% to a small pixel value */
-    border-radius: 4px;
-
-    /* Basic visual cleanup (adjust colors as you like) */
-    background-color: #80ced6;
-    color: black;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-/* ===================================================================== */
-/* footer CSS */
 footer {
-    background-color: #1a1a24;
-    color: #ccc;
-    text-align: center;
-    margin-top: auto;
-    font-size: 0.9rem;
+  background-color: #618685;
+  color: whitesmoke;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
 }
