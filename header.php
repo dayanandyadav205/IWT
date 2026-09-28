@@ -149,13 +149,6 @@
         </ul>
     </nav>
 
-     <!--Go to Top -->
-    <div class="topBtn">
-        <a href="#top">Top</a>
-    </div>
-
-
-
 </body>
 
 </html>

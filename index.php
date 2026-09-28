@@ -12,26 +12,31 @@
 
 <body>
     <?php include 'header.php'; ?>
+      
+
+   <div class="bottomBtn">
+        <a href="#bottom">Go to bottom</a>
+    </div>
 
     <!-- The flexible grid (content) -->
     <main>
         <aside>
             <div class="aboutMe">
                 <div class="myImg">
-                    <!-- <img src="/images/dayanand.jpg" alt=" " /> -->
+                    <img src="/images/dayanand.jpg" alt=" " />
                 </div>
                 <div class="myIntro">
                     <h3>About Me:</h3>
                     <p>I am Dayanand Yadav, working as an Assistant Professor in Computer Science & Engineering
                         Department in
-                        CDGI, Indore</p>
+                        Chameli Devi Group of Institutions, Indore</p>
                 </div>
             </div>
 
             <div class="myLinks">
                 <h3 style="color: white;">My Links</h3>
                 <ul>
-                    <li><a href="https://github.com/dayanandyadav205/CRT" target="_blank"><i
+                    <li><a href="https://github.com/dayanandyadav205/IWT" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
                     </li>
                     <li><a href="https://www.linkedin.com/in/dayanandyadav205" target="_blank"><i
@@ -117,6 +122,7 @@
                         <!-- Image placeholder if needed -->
                     </div>
                     <div>
+                        <section id="bottom"></section>
                         <h3>MySQL</h3>
                         <p>The structural relational database management system. MySQL securely stores, retrieves, and
                             organizes data like user profiles, application content, and transaction histories.</p>
@@ -125,6 +131,11 @@
             </section>
         </content>
     </main>
+
+     <div class="topBtn ">
+        <a href="#top">Go to Top</a>
+    </div>
+
 
     <!-- Footer -->
     <?php include 'footer.php'; ?>

@@ -28,7 +28,9 @@ header {
   padding: 2rem 31px;
 }
 
-header h1, h2, h3{
+header h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -41,7 +43,7 @@ header img {
 /* Navigation bar */
 nav {
   background: #618685;
-  padding: 0 1rem;
+  padding: 0rem 1rem;
 }
 
 /* Desktop Navigation (Defaults) */
@@ -95,26 +97,29 @@ nav li a:hover {
 /* ========================================================================= */
 main {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   gap: 1.5rem;
   /* max-width: 1200px; */
   width: 99%;
-  /* margin: 0 auto; */
+  margin-top: -50px;
   padding: 1rem;
-  flex: 1; /* Pushes footer to the bottom */
+  flex: 1;
+  /* Pushes footer to the bottom */
 }
 
 aside {
   background-color: #618685;
   color: whitesmoke;
-  flex: 0 0 20%; /* Sidebar takes roughly 1/4 width */
+  flex: 0 0 20%;
+  /* Sidebar takes roughly 1/4 width */
   padding: 20px;
   border-radius: 4px;
 }
 
 main content {
   background-color: #d5f4e6;
-  flex: 0 0 80%; /* Content takes roughly 3/4 width */
+  flex: 0 0 80%;
+  /* Content takes roughly 3/4 width */
 }
 
 article,
@@ -152,9 +157,32 @@ aside .aboutMe img {
   gap: 10px;
 }
 
+/* Style the list to keep everything inline and spaced nicely */
+li {
+  /* display: inline-block; */
+  margin: 0 10px;
+  /* Adjust spacing between icons here */
+}
+
+/* Make both the links and the FontAwesome icons white */
+li a i {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 24px;
+  /* Adjust the icon size here */
+  transition: opacity 0.2s ease;
+}
+
+/* Optional: Add a slight dimming effect when hovering */
+li a:hover {
+  opacity: 0.7;
+}
+
+
 main content img {
   max-width: 100%;
-  height: auto; /* Responsive images */
+  height: auto;
+  /* Responsive images */
   display: block;
   margin-bottom: 1rem;
 }
@@ -168,18 +196,18 @@ main content img {
 }
 
 .input,
-.btn{
+.btn {
   height: 40px;
   width: 100%;
   margin-bottom: 10px;
 }
 
-.btn,{
+/* .btn{
   background-color: rgb(42, 41, 41);
   color: white;
   border: none;
   cursor: pointer;
-}
+} */
 
 .todoContainer {
   padding: 30px;
@@ -199,21 +227,55 @@ main content img {
   width: 25%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .topBtn {
   background-color: rgb(236, 58, 9);
   padding: 10px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   border-radius: 50%;
   z-index: 100;
+  width: max-content;
+
+  /* Acts fixed while scrolling, but hides when you scroll back to the very top */
+  position: sticky;
+  top: calc(100vh - 120px);
+  margin-left: auto;
+  margin-right: 20px;
 }
 
-.topBtn a {
+.bottomBtn {
+  background-color: rgb(28, 9, 236);
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 100;
+  width: max-content;
+
+  /* Acts fixed while scrolling, but disappears when you hit the absolute bottom */
+  position: sticky;
+  bottom: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+  /* Push it down visually so it sits cleanly below the top button */
+  transform: translateY(-40px);
+}
+
+.topBtn a,
+.bottomBtn a {
   color: white;
   text-decoration: none;
 }
 
+
+.contact {
+  padding: 20px;
+  background-color: #618685;
+  color: white;
+  padding: 20px;
+  width: 30%;
+  margin: 20px;
+}
 
 /* Mobile Layout Adjustments (Inside your @media (max-width: 768px) block) */
 @media (max-width: 768px) {
@@ -224,7 +286,8 @@ main content img {
     padding: 20px;
   }
 
-  header h1, header h2 {
+  header h1,
+  header h2 {
     font-size: 20px;
   }
 
@@ -260,14 +323,22 @@ main content img {
   }
 
   main {
-    flex-direction: column; /* Stacks aside and content vertically */
+    flex-direction: column;
+    /* Stacks aside and content vertically */
     padding: 10px;
   }
 
-  aside, main content {
-    flex: 1 1 100%; /* Spans full width on mobile screen */
+  aside,
+  main content {
+    flex: 1 1 100%;
+    /* Spans full width on mobile screen */
     width: 100%;
   }
+
+  .contact {
+  width: auto;
+}
+  
 }
 
 

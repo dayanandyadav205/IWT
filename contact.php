@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
+     <link rel="stylesheet" href="/style.css">
     <!-- Font Awesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
@@ -11,7 +12,7 @@
 
     <?php include 'header.php'; ?>
 
-<div style="padding: 20px;">
+<div class="contact">
         <h2>Contact Us</h2>
         
         <!-- Profile Overview -->
@@ -28,12 +29,17 @@
             <li><strong>Official Mail:</strong> <a href="mailto:dayanand.yadav@cdgi.edu.in">dayanand.yadav@cdgi.edu.in</a></li>
             <li><strong>Mobile:</strong> <a href="tel:09926079083">099260-79083</a></li>
         </ul>
-
-        <!-- Social Connections -->
-        <div style="margin-top: 20px;">
-            <a href="https://github.com/dayanandyadav205" aria-label="GitHub" style="margin-right: 15px;"><i class="fa-brands fa-github fa-lg"></i></a>
-            <a href="https://www.linkedin.com/in/dayanandyadav205/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-        </div>
+<br>
+         <div class="myLinks">
+                <ul>
+                    <li><a href="https://github.com/dayanandyadav205/IWT" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/dayanandyadav205" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.w3.org/" target="_blank"><i class="fa-brands fa-w3c"></i></a></li>
+                </ul>
+            </div>
 </div>
     <?php include 'footer.php'; ?>
 
