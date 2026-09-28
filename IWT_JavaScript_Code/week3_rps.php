@@ -10,7 +10,7 @@
     .mainContainer{
       padding: 20px;
       width:700px;
-      height: 300px;
+      height: 500px;
     }
     .container1{
       border: 2px solid black;

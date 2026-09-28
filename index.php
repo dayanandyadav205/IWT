@@ -18,13 +18,13 @@
         <aside>
             <div class="aboutMe">
                 <div class="myImg">
-                    <img src="/images/dayanand.jpg" alt=" " />
+                    <!-- <img src="/images/dayanand.jpg" alt=" " /> -->
                 </div>
                 <div class="myIntro">
-                    <h3>About Me</h3>
+                    <h3>About Me:</h3>
                     <p>I am Dayanand Yadav, working as an Assistant Professor in Computer Science & Engineering
                         Department in
-                        Chameli Devi Group of Institutions, Indore</p>
+                        CDGI, Indore</p>
                 </div>
             </div>
 
