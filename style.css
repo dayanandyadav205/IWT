@@ -151,6 +151,16 @@ aside .aboutMe img {
   object-fit: cover;
 }
 
+aside .myLinks{
+  display: flex;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+  text-align: justify;
+  align-items: center;
+}
+
+
 .myLinks ul {
   list-style-type: none;
   display: flex;
@@ -200,31 +210,6 @@ main content img {
   height: 40px;
   width: 100%;
   margin-bottom: 10px;
-}
-
-/* .btn{
-  background-color: rgb(42, 41, 41);
-  color: white;
-  border: none;
-  cursor: pointer;
-} */
-
-.todoContainer {
-  padding: 30px;
-  background-color: lightsalmon;
-  max-width: 100%;
-  width: 700px;
-  margin: 20px auto;
-}
-
-.todoContainer input {
-  height: 40px;
-  width: 70%;
-}
-
-.todoContainer .btnaddItem {
-  height: 40px;
-  width: 25%;
 }
 
 html {

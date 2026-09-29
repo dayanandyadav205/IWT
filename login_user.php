@@ -49,7 +49,7 @@ if (isset($_POST['login'])) {
         }
     </script>
 
-    <title>Admin Login</title>
+    <title>User Login Page</title>
  <style>
    
    </style>
