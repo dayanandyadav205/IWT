@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+   <title>To Do List Application using JavaScript</title>
 <script>
   //To Do List Application 
 let items = JSON.parse(localStorage.getItem("items")) || [];

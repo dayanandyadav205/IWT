@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <title>JavaScript Form Validation</title>
 </head>
 <head>
   <script>

@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>while loop</title>
+  <title>JavaScript while loop</title>
 
   <script>
     var i = 1;

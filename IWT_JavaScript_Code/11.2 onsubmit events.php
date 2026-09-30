@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-
+      <title>JavaScript Events</title>
 </head>
 <head>
   <h1>To check whether Password and Confirm Password match or not</h1>

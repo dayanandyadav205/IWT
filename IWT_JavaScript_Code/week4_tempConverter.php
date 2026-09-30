@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
- 
+   <title>Temperature Conversion using JavaScript</title>
 </head>
 
 <body>

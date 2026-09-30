@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <title>JavaScript Variables</title>
   <!-- Load the components script -->
     <script src="/scripts/components.js" defer></script>
 </head>

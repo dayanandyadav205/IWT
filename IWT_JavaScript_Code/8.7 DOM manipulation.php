@@ -2,7 +2,8 @@
 <html>
 
 <head>
- 
+   <title>JavaScript DOM Manipulation</title>
+
   <style>
     .demoClass{
       color: red;

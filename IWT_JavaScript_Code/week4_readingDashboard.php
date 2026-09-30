@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <title>Reading Dashboard using JavaScript</title>
+
   <style>
     li {
       padding: 10px;

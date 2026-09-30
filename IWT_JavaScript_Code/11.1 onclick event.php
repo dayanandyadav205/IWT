@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <title>JavaScript Events</title>
   </head>
 <body>
  <?php include '../header.php'; ?>

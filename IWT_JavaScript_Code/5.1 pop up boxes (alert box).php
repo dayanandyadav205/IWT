@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Alert box</title>
+  <title> JavaScript Alert box</title>
   
 
   <script type="text/javascript">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>JavaScript DOM Manipulation</title>
 
 </head>
 <head>

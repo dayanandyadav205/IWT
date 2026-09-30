@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Document</title>
+  <title>Rock Paper Scissor Game using JavaScript</title>
   <style>
 
     .mainContainer{

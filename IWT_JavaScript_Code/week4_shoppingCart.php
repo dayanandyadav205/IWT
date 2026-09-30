@@ -3,7 +3,7 @@
 
 <head>
   <title>Home</title>
- 
+   <title>Shopping Cart using JavaScript</title>
   <style>
     .cartContainer {
       line-height: 40px;

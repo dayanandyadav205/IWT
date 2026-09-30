@@ -6,7 +6,7 @@ header('location:index.php');
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>PHP Logout Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

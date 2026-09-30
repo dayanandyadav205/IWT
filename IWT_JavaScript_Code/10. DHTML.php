@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DHTML Example</title>
+  <title>JavaScript DHTML Example</title>
 
   <style>
     #message {
