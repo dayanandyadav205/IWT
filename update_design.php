@@ -46,7 +46,7 @@ $language1  = explode(",", $language)
     <meta name="author" content="Dayanand Yadav">
 
     <!-- Refresh document every 30 seconds: -->
-    <meta http-equiv="refresh" content="30">
+    <!-- <meta http-equiv="refresh" content="30"> -->
 
     <!-- Setting the viewport to make your website look good on all devices: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,7 +126,7 @@ if ($_POST['update'])
         {
         echo "<script >alert('Record Updated')</script>";
         ?>
-            <meta http-equiv="refresh" content="0;url = /display_admin.php"/>
+            <meta http-equiv="refresh" content="0;url = /IWT/display_admin.php"/>
         <?php
         } 
     else 

@@ -22,7 +22,7 @@ echo "Welcome " . $_SESSION['user_name'];
     <meta name="author" content="Dayanand Yadav">
 
     <!-- Refresh document every 30 seconds: -->
-    <meta http-equiv="refresh" content="30">
+    <!-- <meta http-equiv="refresh" content="30"> -->
 
     <!-- Setting the viewport to make your website look good on all devices: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
