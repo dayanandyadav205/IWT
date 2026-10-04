@@ -44,7 +44,7 @@
     <!-- This is navigation section -->
     <nav>
         <ul>
-            <li><a href="/index.php">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li class="dropdown"><a href="#">HTML Topics &#9660;</a>
                 <ul class="dropdown-menu">  
                     <li><a href="/HTML_Topics/HTML_basics.php">HTML Basics</a></li>
@@ -162,10 +162,10 @@
 
             <!-- Right Aligned Items -->
             <ul>
-                <li><a href="/signup.php">Sign Up</a></li>
-                <li><a href="/login_user.php">User Login</a></li>
-                <li><a href="/login_admin.php">Admin Login</a></li>
-                <li><a href="/contact.php">Contact Us</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
+                <li><a href="login_user.php">User Login</a></li>
+                <li><a href="login_admin.php">Admin Login</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
             </ul>
         </ul>
     </nav>
