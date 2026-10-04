@@ -25,7 +25,7 @@
 <body>
 <?php include '../include/header.php'; ?>
     <main>
-        <img src="/IWT/images/commenting_code.jpg" alt="commenting_code">
+        <img src="/images/commenting_code.jpg" alt="commenting_code">
 
         <h2>For more details please refer the Unit-II PPT</h2>
     </main>

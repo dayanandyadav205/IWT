@@ -28,7 +28,7 @@
 
   <main>
     <h2>HTML Lists</h2>
-    <img src="/IWT/images/lists.jpg" alt="Lists">
+    <img src="/images/lists.jpg" alt="Lists">
 
     <h2>For more details please refer the Unit-II PPT</h2>
   </main>

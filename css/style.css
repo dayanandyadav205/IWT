@@ -29,6 +29,7 @@ header img {
 
 /* ================= Navigation CSS ================*/
 nav {
+    display: flex;
     background-color: #0F172A;
     padding: 20px;
 
@@ -179,7 +180,7 @@ form {
 
 
 /* ============ Responsive Layout ===============*/
-@media (max-width:768px) {
+@media (max-width: 768px){
     header {
         display: block;
         font-size: 70%;
@@ -191,37 +192,55 @@ form {
         height: 30%;
     }
 
-      nav ul {
+    /* Change nav wrapper to a column flexbox to stack items perfectly */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Force the main list to take up full width and stack vertical */
+    nav ul {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    /* FIX: Force dropdown list items to behave as stacked blocks instead of inline-blocks */
+    nav ul li.dropdown {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Style the links to be clean, clickable blocks centered on screen */
+    nav ul li a {
         display: block;
         text-align: center;
         padding: 1rem;
+        width: 100%;
     }
 
-     nav ul{
-        display: block;
-        /* text-align: center; */
-        padding: 1rem;
-        padding: 20px;
+    /* Adjust the hidden hover menus for mobile layouts */
+    .dropdown-menu {
+        position: relative; /* Keeps it in line with flow instead of floating */
+        width: 100%;
+        margin-top: 0;
     }
-
-      nav ul li a {
-        display: block;
-        text-align: center;
-        padding: 1rem;
-    }
-
-  
-   
-
 
     .containerAsideMain {
         display: block;
         font-size: 90%;
     }
 
+    /* Centers image/tables horizontally using margin */
     main img,
     table {
-        align-items: center;
+        display: block;
+        margin: 0 auto;
         width: 90vw;
     }
 

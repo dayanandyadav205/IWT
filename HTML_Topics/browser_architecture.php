@@ -27,7 +27,7 @@
 
     <main>
         <h1>XHTML Elements Must be Properly Nested</h1>
-        <img src="/IWT/images/browser-architecture.png" alt="Browser Architecture">
+        <img src="/images/browser-architecture.png" alt="Browser Architecture">
 
         <ul>
             <h2>The browser's main components are:</h2>

@@ -25,7 +25,7 @@
 <body>
 <?php include '../include/header.php'; ?>
 
-    <img src="/IWT/images/meta_tags.png" alt="meta_tags">
+    <img src="/images/meta_tags.png" alt="meta_tags">
 
 <?php include '../include/footer.php'; ?>
 </body>

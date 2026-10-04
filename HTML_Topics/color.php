@@ -25,7 +25,7 @@
 <body>
 <?php include '../include/header.php'; ?>
     <main>
-        <img src="/IWT/images/color in HTML.jpg" alt="HTML colors">
+        <img src="/images/color in HTML.jpg" alt="HTML colors">
 
         <h2>For more details please refer the Unit-II PPT</h2>
     </main>

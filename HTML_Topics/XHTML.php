@@ -54,12 +54,12 @@
         <h1>XHTML Empty Elements Must Always be Closed</h1>
        
         Correct: <br />
-        <img src="/IWT/images/smily.gif" alt="Happy face" />
+        <img src="/images/smily.gif" alt="Happy face" />
 
         <br />
 
         Wrong: <br />
-        <img src="/IWT/images/smily.gif" alt="Happy face">
+        <img src="/images/smily.gif" alt="Happy face">
 
         <hr /><br />
 

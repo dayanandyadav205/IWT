@@ -33,9 +33,9 @@
                     <h2>My Important links</h2>
                 </div>
                 <div class="mylinks">
-                    <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/IWT/images/github.jpg"
+                    <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/images/github.jpg"
                             alt="My GitHub page" width="50px" height="50px"></a>
-                    <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/IWT/images/linkedin.jpg"
+                    <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/images/linkedin.jpg"
                             alt="My Linkedin page" width="50px" height="50px"></a>
                 </div>
 

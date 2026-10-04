@@ -126,7 +126,7 @@ if ($_POST['update'])
         {
         echo "<script >alert('Record Updated')</script>";
         ?>
-            <meta http-equiv="refresh" content="0;url = /IWT/display_admin.php"/>
+            <meta http-equiv="refresh" content="0;url = /display_admin.php"/>
         <?php
         } 
     else 

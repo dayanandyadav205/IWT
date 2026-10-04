@@ -34,7 +34,7 @@
             <div class="aboutme">
                 <h2>About Me</h2>
                 <div class="myimg">
-                    <img src="/IWT/images/dayanand.jpg" alt="Dayanand's Image">
+                    <img src="/images/dayanand.jpg" alt="Dayanand's Image">
                 </div>
                 <p>I am Dayanand Yadav, working as an Assistant Professor in
                     Computer Science & Engineering Department in
@@ -47,9 +47,9 @@
                 <h2>My Important links</h2>
             </div>
             <div class="mylinks">
-                <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/IWT/images/github.jpg"
+                <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/images/github.jpg"
                         alt="My GitHub page"></a>
-                <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/IWT/images/linkedin.jpg"
+                <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/images/linkedin.jpg"
                         alt="My Linkedin page"></a>
             </div>
         </aside>
@@ -60,7 +60,7 @@
             <a href="#core">Jump to Core Technologies Section</a>
 
             <div class="imgcdgi">
-                <img src="/IWT/images/cdgi.jpg" alt="CDGI">
+                <img src="/images/cdgi.jpg" alt="CDGI">
             </div>
             <article>
                 <div>

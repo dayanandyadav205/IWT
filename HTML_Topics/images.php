@@ -23,12 +23,12 @@
     <style>
         /* Background image for full page body */
         body {
-            background-image: url('/IWT/images/cdgi.jpg');
+            background-image: url('/images/cdgi.jpg');
         }
 
         /* Background image for a paragraph */
         /* p {
-            background-image: url('/IWT/images/pic_trulli.jpg');
+            background-image: url('/images/pic_trulli.jpg');
             color: white;
         } */
     </style>
@@ -41,7 +41,7 @@
     <main>
         <div>
             <h1>Images in HTML</h1>
-            <!-- <img src="/IWT/images/pic_trulli.jpg" alt="pic_trulli"> -->
+            <!-- <img src="/images/pic_trulli.jpg" alt="pic_trulli"> -->
         </div>
 
         <div>
