@@ -1,47 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
-     <link rel="stylesheet" href="/style.css">
-    <!-- Font Awesome for Social Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
 <body>
 
-    <?php include 'header.php'; ?>
+<?php include './include/header.php'; ?>
 
-<div class="contact">
-        <h2>Contact Us</h2>
-        
-        <!-- Profile Overview -->
-        <p stlye="font-weight:20px">Dayanand Yadav</p>
-        <p>Assistant Professor<br>
-           Computer Science & Engineering Department<br>
-           Chameli Devi Group of Institutions, Indore</p>
+    <main>
+        <form>
+            <fieldset  style="padding: 20px;">
+                <legend>Contact Us</legend>
+                <!-- Profile Overview -->
+                <p stlye="font-weight:20px">Dayanand Yadav</p>
+                <p>Assistant Professor<br>
+                    Computer Science & Engineering Department<br>
+                    Chameli Devi Group of Institutions, Indore</p>
 
-        <!-- Contact Information -->
-        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-            <li><strong>My Website:</strong> <a href="https://www.iwt5.in" target="_blank">www.iwt5.in</a></li>
-            <li><strong>Personal Mail 1:</strong> <a href="mailto:dayanand.yadav@iwt5.in">dayanand.yadav@iwt5.in</a></li>
-            <li><strong>Personal Mail 2:</strong> <a href="mailto:dayanandyadav205@gmail.com">dayanandyadav205@gmail.com</a></li>
-            <li><strong>Official Mail:</strong> <a href="mailto:dayanand.yadav@cdgi.edu.in">dayanand.yadav@cdgi.edu.in</a></li>
-            <li><strong>Mobile:</strong> <a href="tel:09926079083">099260-79083</a></li>
-        </ul>
-<br>
-         <div class="myLinks">
-                <ul>
-                    <li><a href="https://github.com/dayanandyadav205/IWT" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
-                    </li>
-                    <li><a href="https://www.linkedin.com/in/dayanandyadav205" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://www.w3.org/" target="_blank"><i class="fa-brands fa-w3c"></i></a></li>
+                <!-- Contact Information -->
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li><strong>My Website:</strong> <a href="https://www.iwt5.in" target="_blank">www.iwt5.in</a></li>
+                    <li><strong>Personal Mail:</strong> <a href="mailto:dayanandyadav205@gmail.com">dayanandyadav205@gmail.com</a></li>
+                    <li><strong>Official Mail:</strong> <a href="mailto:dayanand.yadav@cdgi.edu.in">dayanand.yadav@cdgi.edu.in</a></li>
+                    <li><strong>Mobile:</strong> <a href="tel:09926079083">099260-79083</a></li>
                 </ul>
-            </div>
-</div>
-    <?php include 'footer.php'; ?>
+                <br>
+                <div>
+                    <h2>My Important links</h2>
+                </div>
+                <div class="mylinks">
+                    <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/IWT/images/github.jpg"
+                            alt="My GitHub page" width="50px" height="50px"></a>
+                    <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/IWT/images/linkedin.jpg"
+                            alt="My Linkedin page" width="50px" height="50px"></a>
+                </div>
 
+            </fieldset>
+        </form>
+    </main>
+
+       <?php include './include/footer.php'; ?>
 </body>
+
 </html>
