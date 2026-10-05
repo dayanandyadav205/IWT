@@ -1,11 +1,14 @@
-<?php
-//Include the connection file
-include("connection.php");
+<?php include("connection.php");
+// Change this line temporarily to see the real crash message:
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+echo "Connection Ok";
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!-- UTF-8 stands for Unicode Transformation Format – 8-bit. Unicode: A universal library that assigns a unique number (called a code point) to nearly every character, symbol, and emoji in all world languages. -->
     <meta charset="UTF-8">
@@ -40,12 +43,12 @@ include("connection.php");
 
 <body>
 
-<?php include './include/header.php'; ?>
+    <?php include './include/header.php'; ?>
 
     <main>
         <form name="f1" action="" method="POST" onsubmit="return checkpwd()">
             <fieldset>
-                <legend>HTML Form Example</legend>
+                <legend>Sign Up</legend>
                 <table>
                     <tr>
                         <td><input type="text" name="fname" placeholder="First Name" required></td>
@@ -59,7 +62,11 @@ include("connection.php");
                         <td> <input type="password" name="password" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 placeholder="Password"
                                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                                required onmouseover="showpwd()"></td>
+                                required onclick="showpwd()"></td>
+                                <br>
+                        <td>
+                           
+                        </td>
                     </tr>
 
                     <tr>
@@ -86,8 +93,6 @@ include("connection.php");
                 </table>
             </fieldset>
         </form>
-
-        <h2>For more details please refer the Unit-II PPT</h2>
     </main>
 
     <?php include './include/footer.php'; ?>
@@ -122,27 +127,32 @@ include("connection.php");
 </script>
 
 
-
 <?php
 if (isset($_POST['register'])) {
 
-    // Clean string values against injection vectors
-    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
-    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
-    $pwd   = mysqli_real_escape_string($conn, $_POST['password']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $pwd = $_POST['password'];
+    $cpwd = $_POST['cpassword'];
+    $email = $_POST['email'];
 
-    // Standard raw string entry (Make sure your database has matching columns!)
-    $query = "INSERT INTO form (fname, lname, password, email) 
-              VALUES ('$fname', '$lname', '$pwd', '$email')";
+    $query = "INSERT INTO form (fname, lname, password, cpassword, email) 
+              VALUES ('$fname', '$lname', '$pwd', '$cpwd', '$email')";
 
     $data = mysqli_query($conn, $query);
 
     if ($data) {
         echo "<script> alert ('Data Inserted into Database') </script>";
     } else {
-        // This will print out the precise SQL complaint on screen
-        die("Database Query Failed: " . mysqli_error($conn));
+        // Find out exactly what number your database is throwing
+        $error_num = mysqli_errno($conn);
+
+        if ($error_num == 1062) {
+            echo "<script> alert ('Error: This email address is already registered!') </script>";
+        } else {
+            // This will now show you the exact error number so we can figure it out
+            echo "<script> alert ('Failed to Insert. Error Number: " . $error_num . " - " . mysqli_error($conn) . "') </script>";
+        }
     }
 }
 ?>

@@ -58,7 +58,7 @@ echo "Welcome " . $_SESSION['user_name'];
             <h2 style="text-align: center;"><mark>Records To Display & Edit (Admin)</mark></h2>
             <table border="3" cellspacing="5" width="95%">
                 <tr>
-                    <th width="5%">id</th>
+                    <!-- <th width="5%">id</th> -->
                     <th width="8%">First Name</th>
                     <th width="8%">Last Name</th>
                     <th width="10%">Email</th>
@@ -68,7 +68,7 @@ echo "Welcome " . $_SESSION['user_name'];
                 <?php
                 while ($result = mysqli_fetch_assoc($data)) {
                     echo "<tr>
-                <td>" . $result['id'] . "</td>
+                
                 <td>" . $result['fname'] . "</td>
                 <td>" . $result['lname'] . "</td>
                 <td>" . $result['email'] . "</td>

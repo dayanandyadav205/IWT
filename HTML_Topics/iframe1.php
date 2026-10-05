@@ -31,20 +31,6 @@
         <h2>CDGI on Google Map</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.3867536361213!2d75.88653547530167!3d22.615117879461543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e1!3m2!1sen!2sin!4v1758175120964!5m2!1sen!2sin"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy“ referrerpolicy=" no-referrer-when-downgrade"></iframe>
-
-
-        <p>Example: Use the <iframe> tag to embed youtube video on your web page:</p>
-
-        <iframe width="560"
-            height="315"
-            src="https://www.youtube.com/embed/qP23O70ve7k?si=YRapwHxAAI6_htLf"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-
     </main>
 
     <?php include '../include/footer.php'; ?>

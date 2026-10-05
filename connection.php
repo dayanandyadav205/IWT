@@ -9,7 +9,7 @@ $dbName = "user";
 $conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName);
 if($conn)
 {
-    //  echo "Connection Ok";
+     echo "Connection Ok";
 }
 else
 {

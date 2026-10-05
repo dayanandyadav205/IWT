@@ -2,33 +2,45 @@
 session_start();
 include("connection.php");
 
-
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $pwd = $_POST['password'];
 
-    // Secure practice note: Real-world apps should hash passwords instead of plain-text
-    $query = "SELECT * FROM form WHERE email ='$username' AND password = '$pwd'";
-    $data = mysqli_query($conn, $query);
+    // Prepared statement to prevent SQL Injection
+    $query = "SELECT * FROM form WHERE email = ?";
+    
+    try {
+        $stmt = mysqli_prepare($conn, $query);
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "s", $username);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
-    if ($data) {
-        $total = mysqli_num_rows($data);
-        if ($total == 1) {
-            $_SESSION['user_name'] = $username;
-            header('location: display_user.php');
-            exit(); // ALWAYS call exit() after a header redirect
-        } else {
-            $error_msg = "Invalid email or password.";
+            // Fetch user and verify password if a match exists
+            if ($user = mysqli_fetch_assoc($result)) {
+                // Change to: if (password_verify($pwd, $user['password'])) if using secure hashes
+                if ($pwd === $user['password']) {
+                    $_SESSION['user_name'] = $username;
+                    header('Location: display_user.php');
+                    exit();
+                }
+                echo "Login failed: Incorrect password.";
+            } else {
+                echo "Login failed: Email not found.";
+            }
+            mysqli_stmt_close($stmt);
         }
-    } else {
-        $error_msg = "Database query failed: " . mysqli_error($conn);
+    } catch (mysqli_sql_exception $e) {
+        echo "Database error occurred."; // Kept generic for production security
     }
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!-- UTF-8 stands for Unicode Transformation Format – 8-bit. Unicode: A universal library that assigns a unique number (called a code point) to nearly every character, symbol, and emoji in all world languages. -->
     <meta charset="UTF-8">
@@ -63,7 +75,7 @@ if (isset($_POST['login'])) {
 
 <body>
 
-<?php include './include/header.php'; ?>
+    <?php include './include/header.php'; ?>
 
     <!-- Form -->
     <main>
@@ -75,7 +87,7 @@ if (isset($_POST['login'])) {
                 <legend>User Login</legend>
                 <table>
                     <tr>
-                        <td> <input type="text" name="username" placeholder="Email" required>
+                        <td> <input type="email" name="username" placeholder="Email" required>
                         </td>
                     </tr>
 
@@ -120,3 +132,4 @@ if (isset($_POST['login'])) {
         alert("To password yadd kar lo bhai")
     }
 </script>
+

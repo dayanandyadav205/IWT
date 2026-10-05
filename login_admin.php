@@ -6,40 +6,30 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $pwd = $_POST['password'];
 
-    // FIXED: Using Prepared Statements to prevent SQL Injection
-    $query = "SELECT * FROM admin WHERE email = ?";
-    $stmt = mysqli_prepare($conn, $query);
+    // 1. Prepare the secure query structure
+    $stmt = mysqli_prepare($conn, "SELECT * FROM admin WHERE email = ? AND password = ?");
 
-    if ($stmt) {
-        mysqli_stmt_bind_param($stmt, "s", $username);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
+    // 2. Insert user entries securely into the query
+    mysqli_stmt_bind_param($stmt, "ss", $username, $pwd);
+    mysqli_stmt_execute($stmt);
 
-        if ($result && mysqli_num_rows($result) == 1) {
-            $row = mysqli_fetch_assoc($result);
+    // 3. Count matching entries
+    $result = mysqli_stmt_get_result($stmt);
 
-            // Note: If you hash passwords using password_hash(), change this to:
-            // if (password_verify($pwd, $row['password'])) {
-            if ($row['password'] === $pwd) {
-                $_SESSION['user_name'] = $username;
-                header('location: display_admin.php');
-                exit();
-            } else {
-                $error_msg = "Invalid Admin email or password.";
-            }
-        } else {
-            $error_msg = "Invalid Admin email or password.";
-        }
-        mysqli_stmt_close($stmt);
+    if (mysqli_num_rows($result) == 1) {
+        $_SESSION['user_name'] = $username;
+        header('Location: display_admin.php');
+        exit();
     } else {
-        $error_msg = "Database query failed: " . mysqli_error($conn);
+        echo "Login failed: Invalid credentials.";
     }
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!-- UTF-8 stands for Unicode Transformation Format – 8-bit. Unicode: A universal library that assigns a unique number (called a code point) to nearly every character, symbol, and emoji in all world languages. -->
     <meta charset="UTF-8">
@@ -74,7 +64,7 @@ if (isset($_POST['login'])) {
 
 <body>
 
-<?php include './include/header.php'; ?>
+    <?php include './include/header.php'; ?>
 
     <!-- Form -->
     <main>
@@ -86,7 +76,7 @@ if (isset($_POST['login'])) {
                 <legend>Admin Login</legend>
                 <table>
                     <tr>
-                        <td> <input type="text" name="username" placeholder="Email" required>
+                        <td> <input type="email" name="username" placeholder="Email" required>
                         </td>
                     </tr>
 
