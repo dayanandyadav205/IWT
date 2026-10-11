@@ -1,8 +1,14 @@
 <?php
-
+// Put this at the absolute top of display_user.php
 session_start();
-echo "Welcome " . $_SESSION['user_name'];
 
+if (!isset($_SESSION['user_name'])) {
+    // User is not logged in, boot them out to the login page
+    header("Location: login_user.php");
+    exit();
+}
+
+echo "Welcome " . $_SESSION['user_name'];
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -84,7 +90,7 @@ echo "Welcome " . $_SESSION['user_name'];
         </table>
 
         <br>
-<a href="logout.php"><input type="submit" name="" value="Logout" class="btn_logout"></a>
+<a href="logout_user.php">Logout</a>
 
      <?php include './include/footer.php'; ?>
 

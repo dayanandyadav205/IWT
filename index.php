@@ -28,7 +28,7 @@
 <?php include './include/header.php'; ?>
 
     <!-- Aside and Main Section -->
-    <div class="containerAsideMain">
+    <div class="aside-main">
         <!-- This is aside section -->
         <aside>
             <div class="aboutme">

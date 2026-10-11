@@ -2,10 +2,10 @@
 
 session_start();
 
-$_SESSION["username"]="Dayanand Yadav";
+$_SESSION["email"]="Dayanand Yadav";
 $_SESSION["class"]="BE";
 
-echo $_SESSION["username"];
+echo $_SESSION["email"];
 echo $_SESSION["class"];
 
 session_unset();

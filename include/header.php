@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!-- UTF-8 stands for Unicode Transformation Format – 8-bit. Unicode: A universal library that assigns a unique number (called a code point) to nearly every character, symbol, and emoji in all world languages. -->
     <meta charset="UTF-8">
@@ -41,12 +41,15 @@
         </div>
     </header>
 
+        <input type="checkbox" id="menu">
+        <label for="menu">&#9776; Menu</label>
+    
     <!-- This is navigation section -->
     <nav>
         <ul>
             <li><a href="/index.php">HOME</a></li>
             <li class="dropdown"><a href="#">HTML Topics &#9660;</a>
-                <ul class="dropdown-menu">  
+                <ul class="dropdown-menu">
                     <li><a href="/HTML_Topics/HTML_basics.php">HTML Basics</a></li>
                     <li><a href="/HTML_Topics/formatting_and_fonts.php">Formatting and Fonts</a></li>
                     <li><a href="/HTML_Topics/commenting_code.php">Commenting code</a></li>
@@ -57,11 +60,11 @@
                     <li><a href="/HTML_Topics/images.php">Images</a></li>
                     <li><a href="/HTML_Topics/forms.php">Forms</a></li>
                     <li><a href="/HTML_Topics/XHTML.php">XHTML</a></li>
-                     <li><a href="/HTML_Topics/meta_tags.php">Meta Tags</a></li>
-                     <li><a href="/HTML_Topics/character_entities.php">Character Entities</a></li>
-                     <li><a href="/HTML_Topics/iframe1.php">iframe Example-1</a></li>
-                     <li><a href="/HTML_Topics/iframe2.php">iframe Example-2</a></li>
-                     <li><a href="/HTML_Topics/browser_architecture.php">Browser Architecture</a></li>
+                    <li><a href="/HTML_Topics/meta_tags.php">Meta Tags</a></li>
+                    <li><a href="/HTML_Topics/character_entities.php">Character Entities</a></li>
+                    <li><a href="/HTML_Topics/iframe1.php">iframe Example-1</a></li>
+                    <li><a href="/HTML_Topics/iframe2.php">iframe Example-2</a></li>
+                    <li><a href="/HTML_Topics/browser_architecture.php">Browser Architecture</a></li>
                 </ul>
             </li>
 
@@ -94,7 +97,7 @@
                     <li><a href="/JavaScript_Topics/week4_readingDashboard.php">Reading Dashboard</a></li>
                     <li><a href="/JavaScript_Topics/week4_shoppingCart.php">Shopping Cart</a></li>
                     <li><a href="/JavaScript_Topics/week4_toDoList.php">To Do List</a></li>
-                   
+
                     <li style="color:white;">JavaScript Topics</li>
                     <li><a href="/JavaScript_Topics/1. variables.php">1. Variables</a></li>
                     <li><a href="/JavaScript_Topics/2. function1.php">2.1 Function 1</a></li>

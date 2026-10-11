@@ -3,16 +3,16 @@ session_start();
 include("connection.php");
 
 if (isset($_POST['login'])) {
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $pwd = $_POST['password'];
 
     // Prepared statement to prevent SQL Injection
     $query = "SELECT * FROM form WHERE email = ?";
-    
+
     try {
         $stmt = mysqli_prepare($conn, $query);
         if ($stmt) {
-            mysqli_stmt_bind_param($stmt, "s", $username);
+            mysqli_stmt_bind_param($stmt, "s", $email);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
             if ($user = mysqli_fetch_assoc($result)) {
                 // Change to: if (password_verify($pwd, $user['password'])) if using secure hashes
                 if ($pwd === $user['password']) {
-                    $_SESSION['user_name'] = $username;
+                    $_SESSION['user_name'] = $email;
                     header('Location: display_user.php');
                     exit();
                 }
@@ -74,8 +74,15 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
-
     <?php include './include/header.php'; ?>
+
+    <?php
+    if (isset($_GET['status']) && $_GET['status'] == 'success') {
+        echo '<div style="color: green; background-color: #d4edda; border: 1px solid #c3e6cb; padding: 10px; margin-bottom: 15px; border-radius: 4px; text-align: center; width: 300px; font-weight: bold;">
+            <h4>Logged out successfully!</h4>
+          </div>';
+    }
+    ?>
 
     <!-- Form -->
     <main>
@@ -87,7 +94,7 @@ if (isset($_POST['login'])) {
                 <legend>User Login</legend>
                 <table>
                     <tr>
-                        <td> <input type="email" name="username" placeholder="Email" required>
+                        <td> <input type="email" name="email" placeholder="Email" required>
                         </td>
                     </tr>
 
@@ -125,11 +132,3 @@ if (isset($_POST['login'])) {
         alert("To password yadd kar lo bhai")
     }
 </script>
-<title>User Login</title>
-
-<script>
-    function message() {
-        alert("To password yadd kar lo bhai")
-    }
-</script>
-

@@ -1,4 +1,5 @@
 <?php
+// logout_user.php
 session_start();
 
 // 1. Clear all session variables
@@ -16,6 +17,7 @@ if (ini_get("session.use_cookies")) {
 // 3. Destroy the session file on the server
 session_destroy();
 
-header("Location: login_user.php");
+// 4. Redirect back to your clean login file
+header("Location: login_user.php?status=success");
 exit;
 ?>

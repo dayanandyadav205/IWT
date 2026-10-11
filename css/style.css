@@ -27,6 +27,15 @@ header img {
 }
 
 
+/* Toggle Nav Menu */
+#menu {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
 /* ================= Navigation CSS ================*/
 nav {
     display: flex;
@@ -73,7 +82,7 @@ nav ul a:hover {
 }
 
 /* ============ Main/Aside/Content CSS ===================*/
-.containerAsideMain {
+.aside-main {
     display: flex;
 }
 
@@ -180,43 +189,46 @@ form {
 
 
 /* ============ Responsive Layout ===============*/
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
     header {
-        display: block;
-        font-size: 70%;
-        line-height: 30px;
-    }
-
-    header img{
-        width: 30%;
-        height: 30%;
-    }
-
-    /* Change nav wrapper to a column flexbox to stack items perfectly */
-    nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        /* line-height: 30px; */
     }
 
-    /* Force the main list to take up full width and stack vertical */
+    /* 2. Hide the nav by default */
+    nav {
+        display: none;
+    }
+
+    label {
+        display: block;
+    }
+
+    #menu:checked~nav {
+        display: block;
+    }
+
+
     nav ul {
         display: flex;
-        flex-direction: column; 
-        width: 100%;
+        flex-direction: column;
+        /* width: 70%; */
         text-align: center;
-        padding: 0;
+        /* padding: 0; */
     }
 
-    /* FIX: Force dropdown list items to behave as stacked blocks instead of inline-blocks */
     nav ul li.dropdown {
         display: block;
         width: 100%;
         text-align: center;
     }
 
-    /* Style the links to be clean, clickable blocks centered on screen */
     nav ul li a {
         display: block;
         text-align: center;
@@ -224,28 +236,24 @@ form {
         width: 100%;
     }
 
-    /* Adjust the hidden hover menus for mobile layouts */
     .dropdown-menu {
-        position: relative; /* Keeps it in line with flow instead of floating */
+        position: relative;
         width: 100%;
         margin-top: 0;
+        background-color: blanchedalmond;
     }
 
-    .containerAsideMain {
+    .dropdown-menu a {
+        color: black;
+    }
+
+    .aside-main {
         display: block;
-        font-size: 90%;
+        padding: 10px;
     }
 
-    /* Centers image/tables horizontally using margin */
-    main img,
-    table {
-        display: block;
-        margin: 0 auto;
-        width: 90vw;
-    }
-
-    footer{
-        text-align: center;
-        font-size: 60%;
+    aside,
+    main {
+        padding: 10px;
     }
 }

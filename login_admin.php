@@ -63,13 +63,18 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
-
     <?php include './include/header.php'; ?>
+
+    <?php
+    if (isset($_GET['status']) && $_GET['status'] == 'success') {
+        echo '<div style="color: green; background-color: #d4edda; border: 1px solid #c3e6cb; padding: 10px; margin-bottom: 15px; border-radius: 4px; text-align: center; width: 300px; font-weight: bold;">
+            <h4>Logged out successfully!</h4>
+          </div>';
+    }
+    ?>
 
     <!-- Form -->
     <main>
-
-
         <form action="#" method="POST" autocomplete="off">
 
             <fieldset>

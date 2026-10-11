@@ -48,7 +48,9 @@
 
         <p>White Left-Pointing Triangle:  &#9664; &#9665;</p>
 
-        <p>White Right-Pointing Triangle: &#9654; &#9655;</p
+        <p>White Right-Pointing Triangle: &#9654; &#9655;</p>
+
+        <p>Toggle button for collapsible-nav: &#9776;</p>
     </main>
 
     <?php include '../include/footer.php'; ?>
