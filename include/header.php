@@ -165,9 +165,8 @@
 
             <!-- Right Aligned Items -->
             <ul>
-                <li><a href="/form.php">Sign Up</a></li>
-                <li><a href="/login_user.php">User Login</a></li>
-                <li><a href="/login_admin.php">Admin Login</a></li>
+                <li><a href="/signup.php">Sign Up</a></li>
+                <li><a href="/login.php">Login</a></li>
                 <li><a href="/contact.php">Contact Us</a></li>
             </ul>
         </ul>
