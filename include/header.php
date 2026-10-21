@@ -89,7 +89,7 @@
 
             <!-- Dropdown JS -->
             <li class="dropdown">
-                <a href="#">JavaScript Topics </a>
+                <a href="#">JavaScript Topics &#9660;</a>
                 <ul class="dropdown-menu">
                     <li style="color:white;">JavaScript Applications</li>
                     <li><a href="/JavaScript_Topics/week3_rps.php">RPS Game</a></li>
@@ -165,7 +165,7 @@
 
             <!-- Right Aligned Items -->
             <ul>
-                <li><a href="/signup.php">Sign Up</a></li>
+                <li><a href="/signup.php">Signup</a></li>
                 <li><a href="/login.php">Login</a></li>
                 <li><a href="/contact.php">Contact Us</a></li>
             </ul>

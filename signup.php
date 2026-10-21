@@ -27,7 +27,7 @@ echo "Connection Ok";
     <style>
         fieldset {
             padding: 20px;
-            width:20%
+            width: 20%
         }
 
         input {
@@ -43,20 +43,19 @@ echo "Connection Ok";
     <?php include './include/header.php'; ?>
 
     <main>
-        <form name="f1" action="" method="POST" onsubmit="return checkpwd()">
+        <form name="f1" action="" method="POST" enctype="multipart/form-data" onsubmit="return checkpwd()">
             <fieldset>
                 <legend>Sign Up</legend>
                 <input type="text" name="fname" placeholder="First Name" required>
                 <br /><br /><input type="text" name="lname" placeholder="Last Name" required>
                 <br /><br /><input type="email" name="email" placeholder="Email" required>
-                <br /><br /><input type="password" name="password" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,4}" 
-                placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-                <input type="checkbox" onclick="showpwd()" class="chkbox">
-                <br /><br /> <input type="password" name="cpassword" id="cpwd" placeholder="Confirm Password" required>
+                <br /><br /><input type="password" name="password" id="pwd" placeholder="Password" required>
+                <button type="button" onclick="showpwd()">&#128065;</button><br />
+               <br /> <input type="password" name="cpassword" id="cpwd" placeholder="Confirm Password" required>
                 <span id="pwdmsg"></span>
                 <br /><br /><input type="submit" value="Register" name="register">
                 <br /><br />
-                <p>Already registered? <a href="login_user.php">Click here to Login</a></p>
+                <p>Already registered? <a href="login.php">Click here to Login</a></p>
             </fieldset>
         </form>
     </main>
@@ -96,7 +95,6 @@ echo "Connection Ok";
         $email = $_POST['email'];
         $pwd = $_POST['password'];
         $cpwd = $_POST['cpassword'];
-
 
         $query = "INSERT INTO signup (fname, lname, email, password, cpassword) VALUES ('$fname', '$lname', '$email','$pwd', '$cpwd')";
 

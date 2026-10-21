@@ -40,7 +40,7 @@ label {
 nav {
     display: flex;
     background-color: #0F172A;
-    padding: 20px;
+    padding: 30px;
 
 }
 
@@ -50,7 +50,8 @@ nav ul {
 }
 
 nav ul a {
-    padding: 20px;
+    padding: 30px;
+    margin: 0;
     text-decoration: none;
     color: white;
 }
@@ -201,6 +202,11 @@ form {
         /* line-height: 30px; */
     }
 
+    header img{
+        width: 100px;
+        height: 100px;
+    }
+
     /* 2. Hide the nav by default */
     nav {
         display: none;
@@ -252,8 +258,22 @@ form {
         padding: 10px;
     }
 
+
+
     aside,
     main {
         padding: 10px;
     }
+
+     aside img{
+        width: 100px;
+        height: 100px;
+    }
+
+      main img{
+        width: 90%;
+        height: 90%;
+    }
+
+
 }

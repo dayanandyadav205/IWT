@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_name'])) {
-    header('Location: login_user.php');
+    header('Location: login.php');
     exit();
 }
 
@@ -23,7 +23,8 @@ $user_email = $_SESSION['user_name'];
     <?php include './include/header.php'; ?>
     <h1>Welcome <?php echo ($user_email); ?></h1>
 
-    <a class="logout-btn" href="logout.php">Logout</a>
+
+    <a href="logout.php">Logout</a>
 
 </body>
 

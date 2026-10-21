@@ -1,6 +1,25 @@
 <?php
 session_start();
 include 'connection.php';
+
+// 1. Process the login logic BEFORE any HTML is sent
+if (isset($_POST['login'])) {
+    $email      = $_POST['email'];
+    $password   = $_POST['password'];
+
+    // Note: This query is vulnerable to SQL injection (see security notice below)
+    $query = "SELECT * FROM signup WHERE email = '$email' AND password = '$password'";
+    $data = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($data) == 1) {
+        $_SESSION['user_name'] = $email;
+        header('location:display_user.php');
+        exit(); // Always use exit after a redirect
+    } else {
+        // Store the error message in a variable to display inside the HTML
+        echo "Incorrect Email or password";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +32,12 @@ include 'connection.php';
     <style>
         fieldset {
             padding: 20px;
-            margin: 50px;
-            width: 200px;
+            width: 20%
         }
 
         input {
+            width: 350px;
+            height: 50px;
             font-size: 20px;
         }
     </style>
@@ -38,22 +58,3 @@ include 'connection.php';
 </body>
 
 </html>
-
-<?php
-if (isset($_POST['login'])) {
-    $email      = $_POST['email'];
-    $password   = $_POST['password'];
-
-    $query = "SELECT * FROM signup WHERE email = '$email' AND password = '$password'";
-
-    $data = mysqli_query($conn, $query);
-
-    if (mysqli_num_rows($data) == 1) {
-       $_SESSION['user_name'] = $email;
-        header('location:display_user.php');
-        exit();
-    } else {
-        echo "Incorrect Email or password";
-    }
-}
-?>

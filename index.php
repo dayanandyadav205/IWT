@@ -19,6 +19,8 @@
 
     <!-- Setting the viewport to make your website look good on all devices: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+
     <title>HOME</title>
 </head>
 
