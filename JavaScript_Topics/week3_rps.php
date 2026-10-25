@@ -47,6 +47,7 @@
 <body>
  <?php include '../include/header.php'; ?>
 
+ <main>
   <h1>Rock Paper Scissor Game</h1>
 
   <div class="mainContainer">
@@ -247,7 +248,7 @@
     }
   
     </script>
-
+ </main>
     
   <?php include '../include/footer.php'; ?>
 </body>

@@ -31,7 +31,7 @@ echo "Connection Ok";
         }
 
         input {
-            width: 350px;
+            width: 300px;
             height: 50px;
             font-size: 20px;
         }
@@ -49,7 +49,8 @@ echo "Connection Ok";
                 <input type="text" name="fname" placeholder="First Name" required>
                 <br /><br /><input type="text" name="lname" placeholder="Last Name" required>
                 <br /><br /><input type="email" name="email" placeholder="Email" required>
-                <br /><br /><input type="password" name="password" id="pwd" placeholder="Password" required>
+                <br /><br /><input type="password" name="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+                    title="Must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character." required>
                 <button type="button" onclick="showpwd()">&#128065;</button><br />
                <br /> <input type="password" name="cpassword" id="cpwd" placeholder="Confirm Password" required>
                 <span id="pwdmsg"></span>

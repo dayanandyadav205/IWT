@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <title>Home</title>
-   <title>Shopping Cart using JavaScript</title>
+  <title>Shopping Cart using JavaScript</title>
   <style>
     .cartContainer {
       line-height: 40px;
@@ -35,7 +35,11 @@
       if (existingItem) {
         cart[i].quantity += 1;
       }
-      cart.push({ item, price, quantity: 1 });
+      cart.push({
+        item,
+        price,
+        quantity: 1
+      });
       renderCart(); //nested function
     }
 
@@ -83,38 +87,39 @@
 </head>
 
 <body>
- <?php include '../include/header.php'; ?>
+  <?php include '../include/header.php'; ?>
 
-  <div class="cartContainer">
-    <h2>Shopping Cart Application</h2>
+  <main>
+    <div class="cartContainer">
+      <h2>Shopping Cart Application</h2>
 
-    <div class="products">
-      <div>
-        <img src="/images/laptop.jpg" alt=""><br>
-        <button onclick="addCart('Laptop', 50000)">Buy (Laptop: &#8377; 50,000)</button>
+      <div class="products">
+        <div>
+          <img src="/images/laptop.jpg" alt=""><br>
+          <button onclick="addCart('Laptop', 50000)">Buy (Laptop: &#8377; 50,000)</button>
+        </div>
+
+        <div>
+          <img src="/images/headphone.jpg" alt=""><br>
+          <button onclick="addCart('Headphone', 2000)">Buy (HeadPhone: &#8377; 2,000)</button>
+        </div>
+
+        <div>
+          <img src="/images/mouse.jpg" alt=""><br>
+          <button onclick="addCart('Mouse',500)">Buy Mouse (Mouse: &#8377; 5,00) </button>
+        </div>
       </div>
 
-      <div>
-        <img src="/images/headphone.jpg" alt=""><br>
-        <button onclick="addCart('Headphone', 2000)">Buy (HeadPhone: &#8377; 2,000)</button>
-      </div>
+      <h4>Cart Items</h4>
+      <ul id="cartItems">
 
-      <div>
-        <img src="/images/mouse.jpg" alt=""><br>
-        <button onclick="addCart('Mouse',500)">Buy Mouse (Mouse: &#8377; 5,00) </button>
-      </div>
+      </ul>
+
+      <p id="totalPrice"></p>
+
     </div>
 
-    <h4>Cart Items</h4>
-    <ul id="cartItems">
-
-    </ul>
-
-    <p id="totalPrice"></p>
-
-  </div>
-
-  
+  </main>
 
   <?php include '../include/footer.php'; ?>
 

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!-- UTF-8 stands for Unicode Transformation Format – 8-bit. Unicode: A universal library that assigns a unique number (called a code point) to nearly every character, symbol, and emoji in all world languages. -->
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
 
     <!-- Setting the viewport to make your website look good on all devices: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>HOME</title>
 </head>
@@ -27,28 +27,27 @@
 <body>
     <!-- Include Header using php  -->
 
-<?php include './include/header.php'; ?>
+    <?php include './include/header.php'; ?>
 
     <!-- Aside and Main Section -->
     <div class="aside-main">
         <!-- This is aside section -->
         <aside>
             <div class="aboutme">
-                <h2>About Me</h2>
+                <h3 style="text-align: center;">About Me</h3>
+                <br/>
                 <div class="myimg">
                     <img src="/images/dayanand.jpg" alt="Dayanand's Image">
                 </div>
+                <br/>
                 <p>I am Dayanand Yadav, working as an Assistant Professor in
                     Computer Science & Engineering Department in
                     Chameli Devi Group of Institutions, Indore</p>
             </div>
 
 
-
-            <div>
-                <h2>My Important links</h2>
-            </div>
             <div class="mylinks">
+                <h4>My links</h4>
                 <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/images/github.jpg"
                         alt="My GitHub page"></a>
                 <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/images/linkedin.jpg"

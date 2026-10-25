@@ -21,9 +21,9 @@ header {
 }
 
 header img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 150px;
+    height: 80px;
+    border-radius: 2%;
 }
 
 
@@ -40,7 +40,7 @@ label {
 nav {
     display: flex;
     background-color: #0F172A;
-    padding: 30px;
+    padding: 20px;
 
 }
 
@@ -50,8 +50,8 @@ nav ul {
 }
 
 nav ul a {
-    padding: 30px;
-    margin: 0;
+    padding: 20px;
+    /* margin: 10px; */
     text-decoration: none;
     color: white;
 }
@@ -68,14 +68,14 @@ nav ul a:hover {
 .dropdown-menu {
     position: absolute;
     display: none;
-    padding: 1rem;
+    padding: 0.5rem;
     margin-top: 20px;
     background-color: #0F172A;
-    width: 350px;
+    width: 300px;
 }
 
 .dropdown-menu li {
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -199,12 +199,21 @@ form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* line-height: 30px; */
+        line-height: 30px;
     }
 
-    header img{
-        width: 100px;
-        height: 100px;
+    header h1, h2, h3{
+        font-size: 90%;
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact img {
+        width: 30px;
+        height: 30px;
     }
 
     /* 2. Hide the nav by default */
@@ -247,6 +256,7 @@ form {
         width: 100%;
         margin-top: 0;
         background-color: blanchedalmond;
+        padding: 0.5rem;
     }
 
     .dropdown-menu a {
@@ -259,18 +269,13 @@ form {
     }
 
 
-
-    aside,
-    main {
-        padding: 10px;
+  
+      .mylinks img {
+        width: 20px;
+        height: 20px;
     }
 
-     aside img{
-        width: 100px;
-        height: 100px;
-    }
-
-      main img{
+    main img {
         width: 90%;
         height: 90%;
     }

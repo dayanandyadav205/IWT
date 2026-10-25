@@ -28,7 +28,7 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
-    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
     <style>
         fieldset {
             padding: 20px;
@@ -36,7 +36,7 @@ if (isset($_POST['login'])) {
         }
 
         input {
-            width: 350px;
+            width: 300px;
             height: 50px;
             font-size: 20px;
         }
@@ -45,16 +45,16 @@ if (isset($_POST['login'])) {
 
 <body>
     <?php include './include/header.php'; ?>
-    <h1>User Login</h1>
-
-    <form action="" method="post">
-        <fieldset>
-            <legend>User Login</legend>
-            <br /><input type="email" name="email" placeholder="Email" required>
-            <br /><br /><input type="password" name="password" placeholder="Password" required>
-            <br /><br /><input type="submit" name="login" value="Login">
-        </fieldset>
-    </form>
+    <main>
+        <form action="" method="post">
+            <fieldset>
+                <legend>User Login</legend>
+                <br /><input type="email" name="email" placeholder="Email" required>
+                <br /><br /><input type="password" name="password" placeholder="Password" required>
+                <br /><br /><input type="submit" name="login" value="Login">
+            </fieldset>
+        </form>
+    </main>
 </body>
 
 </html>

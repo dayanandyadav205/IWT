@@ -73,7 +73,7 @@
 
                     <tr>
                         <td>
-                            <p>Already registered? <a href="login_user.php">Click here to Login</a></p>
+                            <p>Already registered? <a href="/login.php">Click here to Login</a></p>
                         </td>
                     </tr>
                 </table>

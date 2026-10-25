@@ -27,7 +27,7 @@
     <!-- This is header section -->
     <header>
         <div>
-            <img src="/images/iwt5.jpg" alt="IWT Logo">
+            <a href="/index.php"><img src="/images/iwt5-logo.jpg" alt="IWT Logo"></a>
         </div>
 
         <div>
@@ -37,7 +37,7 @@
         </div>
 
         <div>
-            <img src="/images/nba.jpg" alt="NBA logo">
+            <!-- <img src="/images/nba.jpg" alt="NBA logo"> -->
         </div>
     </header>
 

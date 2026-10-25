@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +9,11 @@
 
 <body>
 
-<?php include './include/header.php'; ?>
+    <?php include './include/header.php'; ?>
 
-    <main>
+    <main class="contact">
         <form>
-            <fieldset  style="padding: 20px;">
+            <fieldset style="padding: 20px;">
                 <legend>Contact Us</legend>
                 <!-- Profile Overview -->
                 <p stlye="font-weight:20px">Dayanand Yadav</p>
@@ -30,20 +30,21 @@
                 </ul>
                 <br>
                 <div>
-                    <h2>My Important links</h2>
+                    <h4>My Important links</h4>
                 </div>
                 <div class="mylinks">
                     <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/images/github.jpg"
-                            alt="My GitHub page" width="50px" height="50px"></a>
+                            alt="My GitHub page" width="30px" height="30px"></a>
                     <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/images/linkedin.jpg"
-                            alt="My Linkedin page" width="50px" height="50px"></a>
+                            alt="My Linkedin page" width="30px" height="30px"></a>
                 </div>
-
             </fieldset>
         </form>
+
+
     </main>
 
-       <?php include './include/footer.php'; ?>
+    <?php include './include/footer.php'; ?>
 </body>
 
 </html>
