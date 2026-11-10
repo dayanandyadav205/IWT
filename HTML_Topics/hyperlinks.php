@@ -40,7 +40,7 @@
 
         <h3>Internal Links: Internal links point from one page on a website to another page on the same website.
         </h3>
-        Internal Link:<a href="\IWT\HTML_Topics\hyperlinks.php"> \IWT\HTML_Topics\hyperlinks.php</a>
+        Internal Link:<a href="\HTML_Topics\hyperlinks.php">\HTML_Topics\hyperlinks.php</a>
        
     
 

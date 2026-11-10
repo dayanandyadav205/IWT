@@ -1,0 +1,118 @@
+
+Step 1: Kill All Hidden Tunnel Processes
+
+Windows often keeps ghost instances of cloudflared.exe active in the background, even if they aren't visible in the Services panel.
+1. Right-click your Windows Start button and select Terminal (Admin) or Command Prompt (Admin).
+2. Run this command to completely wipe out any active tunnel processes:cmd
+taskkill /f /im cloudflared.exe
+Use code with caution.
+3. Run it a second time to ensure it returns "process not found."
+
+Step 2: Confirm the Token and Run Fresh
+
+Now that all hidden processes are dead, your tunnel status in the online Cloudflare dashboard should drop from Healthy to Down / Inactive within a minute. If it stays healthy, an entirely different machine on your network is running the tunnel.
+Once it drops, start the exact instance you want to test:
+1. Go to your Cloudflare Zero Trust Dashboard > Networks > Tunnels and click on your tunnel.
+2. Look at your Overview or Setup tab to grab your Tunnel Token (the long string of letters and numbers).
+3. Back in your Administrator Command Prompt, navigate to your file location and run it manually in the foreground to watch for real-time logs:cmd
+cloudflared.exe tunnel run --token <YOUR_EXACT_DASHBOARD_TOKEN>
+Use code with caution.
+4. Look closely at the window text. It must establish 4 active connections to the edge network without printing any errors.
+
+Step 3: Run the Local Routing Diagnostic Test
+
+While keeping that black terminal window running in Step 2, open a completely separate Command Prompt window on the same machine. Let's see if your computer's internal networking loop allows the tunnel to talk to XAMPP.
+Run this loopback test command:
+cmd
+curl -I http://127.0.0.1
+Use code with caution.
+• If it returns HTTP/1.1 200 OK (or a 301/302 redirect): Your XAMPP server is healthy and responding. Keep the terminal windows open, open your phone or a private browser window on your PC, and go to http://iwt5.in. The 1033 error should be completely gone.
+• If it returns Connection refused or times out: Windows is actively blocking port 80 traffic internally. Go to your Windows Defender Firewall settings and temporarily turn off "Private Network Firewall" to see if the website instantly loads.
+Let me know the results of these two specific steps:
+• Did the taskkill command successfully kill an active process, and did your tunnel drop to "Down" in the dashboard?
+• What exact response did you get when running the curl -I http://127.0.0.1 command?
+
+Yes, it stays healthy
+
+what should I do next?
+
+If your Cloudflare dashboard status stays 🟢 "Healthy" even after you kill all cloudflared.exe processes on your Windows machine, it means the tunnel you are editing in the dashboard is not the one running your website—another computer, another server, or a Docker/service instance elsewhere on your network or account is actively connected using that token.
+You are looking at the wrong tunnel or an orphaned configuration. Follow these steps to take back control and fix the routing.
+
+Step 1: Create a Brand New Tunnel
+
+Instead of fighting an invisible or ghost tunnel process somewhere on your network, abandon it and generate a completely fresh one:
+1. Go to your Cloudflare Zero Trust Dashboard.
+2. Navigate to Networks > Tunnels.
+3. Click Create a tunnel, select Cloudflared, and give it a clear, unique name (e.g., iwt5-xampp-pc).
+4. On the installation screen, select Windows to view your new unique Tunnel Token. Do not close this page.
+
+Step 2: Purge and Reinstall cloudflared on Your Windows PC
+
+1. Open Command Prompt as Administrator on your Windows XAMPP machine.
+2. Stop and uninstall any existing Cloudflare Windows service (if one was previously registered):cmd
+cloudflared.exe service uninstall
+Use code with caution.
+3. Kill any lingering tasks again:cmd
+taskkill /f /im cloudflared.exe
+Use code with caution.
+4. Install the service using your brand-new token from Step 1:cmd
+cloudflared.exe service install <YOUR_NEW_TOKEN_STRING>
+Use code with caution.
+5. Start the Windows service:cmd
+net start cloudflared
+Use code with caution.
+
+Step 3: Re-map Your Public Hostname to the New Tunnel
+
+1. Back in your new tunnel's configuration page on the Cloudflare dashboard, go to the Public Hostname tab.
+2. Click Add a public hostname:
+	• Subdomain: (leave blank for root, or type www)
+	• Domain: iwt5.in
+	• Service Type: HTTP
+	• URL: 127.0.0.1:80
+3. Click Save hostname.
+4. Check your main Cloudflare DNS Dashboard for iwt5.in to make sure the root CNAME record is pointing directly to your new tunnel's *.cfargotunnel.com target.
+
+Step 4: Test in Incognito Mode
+
+Wait 30 to 60 seconds for the DNS and edge routes to propagate, then open an Incognito / Private browsing window and go to http://iwt5.in.
+After creating the brand-new tunnel and running cloudflared.exe service install with the fresh token, does the status in your Cloudflare Zero Trust dashboard update to Healthy for this specific new tunnel, and does http://iwt5.in load your XAMPP page?
+
+1. iwt5.in to make sure the root CNAME record is pointing directly to your new tunnel's *.cfargotunnel.com target.
+pointing to b28b9a6b-952f-4647-8373-d891fc2a8202.cfargotunnel.com
+
+but my tunnel id is 4b7ee3d6-5c3c-4306-988d-382736c2c221
+
+
+You said: 1. iwt5.in to make sure the root CNAME record is pointing directly to your new tunnel's *.cfargotunnel.com target.pointing to b28b9a6b-952f-4647-8373-d891fc2a8202.cfargotunnel.combut my tunnel id is 4b7ee3d6-5c3c-4306-988d-382736c2c221
+
+1. iwt5.in to make sure the root CNAME record is pointing directly to your new tunnel's *.cfargotunnel.com target.pointing to b28b9a6b-952f-4647-8373-d891fc2a8202.cfargotunnel.combut my tunnel id is 4b7ee3d6-5c3c-4306-988d-382736c2c221
+
+You have found the exact reason for the Error 1033.
+
+Your DNS record is pointing to the old, ghost tunnel (b28b9a6b...), while your actual running Windows XAMPP machine is connected to your new tunnel (4b7ee3d6...). Because of this mismatch, Cloudflare is sending your web traffic to a tunnel that doesn't exist or isn't running on your computer.
+To fix this, you just need to update your DNS record to match your active tunnel ID.
+
+How to Fix It
+
+1. Log into your standard Cloudflare Dashboard.
+2. Select your domain: iwt5.in.
+3. On the left sidebar, click on DNS > Records.
+4. Look through your list of records for the CNAME record that has the Name @ (or iwt5.in). You will see it pointing to the wrong target: b28b9a6b-952f-4647-8373-d891fc2a8202.cfargotunnel.com.
+5. Click Edit on that row.
+6. Change the Target field so it points exactly to your active tunnel ID:text
+4b7ee3d6-5c3c-4306-988d-382736c2c221.cfargotunnel.com
+Use code with caution.
+7. Make sure the Proxy status toggle is turned ON (the cloud icon must be orange 🟧).
+8. Click Save.
+
+Step 2: Clear Your Cache and Test
+
+DNS changes inside Cloudflare happen instantly, but your computer or browser will have cached the old Error 1033 page.
+• Open a completely fresh Incognito / Private Window in your browser.
+• Try loading http://iwt5.in.
+• If you are testing on the same machine, you can also clear your local network cache by opening Command Prompt and running:cmd
+ipconfig /flushdns
+Use code with caution.
+Once you update that CNAME record to point to 4b7ee3d6-5c3c-4306-988d-382736c2c221.cfargotunnel.com, does your XAMPP website finally load up successfully?

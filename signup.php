@@ -24,42 +24,30 @@ echo "Connection Ok";
     <!-- Setting the viewport to make your website look good on all devices: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <style>
-        fieldset {
-            padding: 20px;
-            width: 20%
-        }
-
-        input {
-            width: 300px;
-            height: 50px;
-            font-size: 20px;
-        }
-    </style>
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
+    <!-- header section -->
     <?php include './include/header.php'; ?>
-
-    <main>
-        <form name="f1" action="" method="POST" enctype="multipart/form-data" onsubmit="return checkpwd()">
-            <fieldset>
-                <legend>Sign Up</legend>
-                <input type="text" name="fname" placeholder="First Name" required>
-                <br /><br /><input type="text" name="lname" placeholder="Last Name" required>
-                <br /><br /><input type="email" name="email" placeholder="Email" required>
-                <br /><br /><input type="password" name="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
-                    title="Must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character." required>
-                <button type="button" onclick="showpwd()">&#128065;</button><br />
-               <br /> <input type="password" name="cpassword" id="cpwd" placeholder="Confirm Password" required>
-                <span id="pwdmsg"></span>
-                <br /><br /><input type="submit" value="Register" name="register">
-                <br /><br />
-                <p>Already registered? <a href="login.php">Click here to Login</a></p>
-            </fieldset>
-        </form>
-    </main>
+        <main>
+            <form name="f1" action="" method="POST" enctype="multipart/form-data" onsubmit="return checkpwd()">
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    <br /><br /><input type="text" name="lname" placeholder="Last Name" required>
+                    <br /><br /><input type="email" name="email" placeholder="Email" required>
+                    <br /><br /><input type="password" name="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+                        title="Must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character." required>
+                    <button type="button" onclick="showpwd()">&#128065;</button><br />
+                    <br /> <input type="password" name="cpassword" id="cpwd" placeholder="Confirm Password" required>
+                    <span id="pwdmsg"></span>
+                    <br /><br /><input type="submit" value="Register" name="register">
+                    <br /><br />
+                    <p>Already registered? <a href="login.php">Click here to Login</a></p>
+                </fieldset>
+            </form>
+        </main>
 
     <script>
         // function to check Password
@@ -109,7 +97,7 @@ echo "Connection Ok";
     }
     ?>
 
-
+    </div>
 
     <?php include './include/footer.php'; ?>
 </body>

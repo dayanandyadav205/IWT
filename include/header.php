@@ -21,6 +21,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- PushAlert -->
+    <script type="text/javascript">
+        (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = "https://cdn.pushalert.co/integrate_44ef000f58ccfae7a58fc14fda4538cd.js";
+            s.parentNode.insertBefore(g, s);
+        }(document, "script"));
+    </script>
+    <!-- End PushAlert -->
+
 </head>
 
 <body>
@@ -41,9 +53,10 @@
         </div>
     </header>
 
-        <input type="checkbox" id="menu">
-        <label for="menu">&#9776; Menu</label>
-    
+    <!-- toggle Menu -->
+    <input type="checkbox" id="menu">
+    <label for="menu">&#9776; Menu</label>
+
     <!-- This is navigation section -->
     <nav>
         <ul>
@@ -91,14 +104,14 @@
             <li class="dropdown">
                 <a href="#">JavaScript Topics &#9660;</a>
                 <ul class="dropdown-menu">
-                    <li style="color:white;">JavaScript Applications</li>
+                    <li style="font-weight: bolder; color: #FFFFFF;">JavaScript Applications</li>
                     <li><a href="/JavaScript_Topics/week3_rps.php">RPS Game</a></li>
                     <li><a href="/JavaScript_Topics/week3_simple_quiz.php">Simple Quiz</a></li>
                     <li><a href="/JavaScript_Topics/week4_readingDashboard.php">Reading Dashboard</a></li>
                     <li><a href="/JavaScript_Topics/week4_shoppingCart.php">Shopping Cart</a></li>
                     <li><a href="/JavaScript_Topics/week4_toDoList.php">To Do List</a></li>
 
-                    <li style="color:white;">JavaScript Topics</li>
+                    <li style="font-weight: bolder; color: #FFFFFF;">JavaScript Topics</li>
                     <li><a href="/JavaScript_Topics/1. variables.php">1. Variables</a></li>
                     <li><a href="/JavaScript_Topics/2. function1.php">2.1 Function 1</a></li>
                     <li><a href="/JavaScript_Topics/2. function2.php">2.2 Function 2</a></li>
@@ -168,6 +181,7 @@
                 <li><a href="/signup.php">Signup</a></li>
                 <li><a href="/login.php">Login</a></li>
                 <li><a href="/contact.php">Contact Us</a></li>
+                <li><a href="/downloads.php">Downloads</a></li>
             </ul>
         </ul>
     </nav>

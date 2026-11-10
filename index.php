@@ -35,11 +35,11 @@
         <aside>
             <div class="aboutme">
                 <h3 style="text-align: center;">About Me</h3>
-                <br/>
+                <br />
                 <div class="myimg">
                     <img src="/images/dayanand.jpg" alt="Dayanand's Image">
                 </div>
-                <br/>
+                <br />
                 <p>I am Dayanand Yadav, working as an Assistant Professor in
                     Computer Science & Engineering Department in
                     Chameli Devi Group of Institutions, Indore</p>

@@ -5,44 +5,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
 
     <?php include './include/header.php'; ?>
 
-    <main class="contact">
-        <form>
-            <fieldset style="padding: 20px;">
-                <legend>Contact Us</legend>
-                <!-- Profile Overview -->
-                <p stlye="font-weight:20px">Dayanand Yadav</p>
-                <p>Assistant Professor<br>
-                    Computer Science & Engineering Department<br>
-                    Chameli Devi Group of Institutions, Indore</p>
+        <main>
+            <form>
+                <fieldset style="width: 30rem;">
+                    <legend>Contact Us</legend>
+                    <h4>Dayanand Yadav</h4>
+                    <p>Assistant Professor<br>
+                        Computer Science & Engineering Department<br>
+                        Chameli Devi Group of Institutions, Indore</p>
 
-                <!-- Contact Information -->
-                <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                    <li><strong>My Website:</strong> <a href="https://www.iwt5.in" target="_blank">www.iwt5.in</a></li>
-                    <li><strong>Personal Mail:</strong> <a href="mailto:dayanandyadav205@gmail.com">dayanandyadav205@gmail.com</a></li>
-                    <li><strong>Official Mail:</strong> <a href="mailto:dayanand.yadav@cdgi.edu.in">dayanand.yadav@cdgi.edu.in</a></li>
-                    <li><strong>Mobile:</strong> <a href="tel:09926079083">099260-79083</a></li>
-                </ul>
-                <br>
-                <div>
-                    <h4>My Important links</h4>
-                </div>
-                <div class="mylinks">
-                    <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/images/github.jpg"
-                            alt="My GitHub page" width="30px" height="30px"></a>
-                    <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/images/linkedin.jpg"
-                            alt="My Linkedin page" width="30px" height="30px"></a>
-                </div>
-            </fieldset>
-        </form>
-
-
-    </main>
+                    <!-- Contact Information -->
+                    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                        <li><strong>My Website:</strong> <a href="https://www.iwt5.in" target="_blank">www.iwt5.in</a></li>
+                        <li><strong>Personal Mail:</strong> <a href="mailto:dayanandyadav205@gmail.com">dayanandyadav205@gmail.com</a></li>
+                        <li><strong>Official Mail:</strong> <a href="mailto:dayanand.yadav@cdgi.edu.in">dayanand.yadav@cdgi.edu.in</a></li>
+                        <li><strong>Mobile:</strong> <a href="tel:09926079083">099260-79083</a></li>
+                    </ul>
+                    <br>
+                    <div>
+                        <h4>My Important links</h4>
+                    </div>
+                    <div class="mylinks">
+                        <a href="https://github.com/dayanandyadav205" target="_blank"><img src="/images/github.jpg"
+                                alt="My GitHub page" width="30px" height="30px"></a>
+                        <a href="https://www.linkedin.com/in/dayanandyadav205/" target="_blank"><img src="/images/linkedin.jpg"
+                                alt="My Linkedin page" width="30px" height="30px"></a>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
 
     <?php include './include/footer.php'; ?>
 </body>

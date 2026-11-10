@@ -9,3 +9,4 @@ Paste your custom database folders into the new data folder.
 Try to Start MySQL from the XAMPP Control Panel.
 Why this works:
 By not copying the old ibdata1 or mysql folder, we are letting MySQL generate a brand new, uncorrupted system registry. Because your custom database folders are still in place, MySQL will detect them on startup.
+

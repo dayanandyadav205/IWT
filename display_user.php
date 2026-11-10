@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_name'])) {
     exit();
 }
 
-$user_email = $_SESSION['user_name'];
+$user_email = $_SESSION['user_email'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +15,17 @@ $user_email = $_SESSION['user_name'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-
+    <!-- <link rel="stylesheet" href=".\css\style.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <?php include './include/header.php'; ?>
-    <h1>Welcome <?php echo ($user_email); ?></h1>
+        <main>
+            <h1>Welcome <?php echo ($user_email); ?></h1>
 
-
-    <a href="logout.php">Logout</a>
+            <a href="logout.php">Logout</a>
+        </main>
 
 </body>
 

@@ -7,12 +7,17 @@
   <title>Quiz Application using JavaScript</title>
   <style>
     .quizContainer {
-      padding: 20px;
+      padding: 1rem;
     }
 
     .questionContainer {
-      padding: 20px;
-      line-height: 40px;
+      padding: 1rem;
+      /* line-height: 2rem; */
+
+
+       input{
+      height: 1rem;
+    }
     }
   </style>
   <link rel="stylesheet" href="/style.css">
@@ -37,6 +42,10 @@
       document.getElementById("percentage").innerHTML = "Your percentage is: " + percentage;
     }
   </script>
+
+  <style>
+   
+  </style>
 </head>
 
 <body>
@@ -45,32 +54,34 @@
   <main>
     <div class="quizContainer">
       <h1>Simple Quiz Application using JavaScript</h1>
+     
+        <div class="questionContainer">
+          <h2>Q 01: What is 2+3?</h2>
+          <input type="radio" name="question1"> (a) 3 <br>
+          <input type="radio" name="question1" id="correct1"> (b) 5 <br>
+          <input type="radio" name="question1"> (c) 7 <br>
+          <input type="radio" name="question1"> (d) 1 <br>
 
-      <div class="questionContainer">
-        <h2>Q 01: What is 2+3?</h2>
-        <input type="radio" name="question1"> (a) 3 <br>
-        <input type="radio" name="question1" id="correct1"> (b) 5 <br>
-        <input type="radio" name="question1"> (c) 7 <br>
-        <input type="radio" name="question1"> (d) 1 <br>
+<br/>
+          <h2>Q 02: What is 7-5?</h2>
+          <input type="radio" name="question2">(a) 5 <br>
+          <input type="radio" name="question2"> (b) 7 <br>
+          <input type="radio" name="question2" id="correct2"> (c) 2 <br>
+          <input type="radio" name="question2"> (d) 0 <br>
 
+          <br/>
+          <h2>Q 03: What is 8*3?</h2>
+          <input type="radio" name="question3" id="correct3"> (a) 24 <br>
+          <input type="radio" name="question3"> (b) 5 <br>
+          <input type="radio" name="question3"> (c) 7 <br>
+          <input type="radio" name="question3"> (d) 1 <br>
+        </div>
 
-        <h2>Q 02: What is 7-5?</h2>
-        <input type="radio" name="question2"> (a) 5 <br>
-        <input type="radio" name="question2"> (b) 7 <br>
-        <input type="radio" name="question2" id="correct2"> (c) 2 <br>
-        <input type="radio" name="question2"> (d) 0 <br>
+        <p id="score"></p><br>
+        <p id="percentage"></p> <br>
 
-        <h2>Q 03: What is 8*3?</h2>
-        <input type="radio" name="question3" id="correct3"> (a) 24 <br>
-        <input type="radio" name="question3"> (b) 5 <br>
-        <input type="radio" name="question3"> (c) 7 <br>
-        <input type="radio" name="question3"> (d) 1 <br>
-      </div>
-
-      <p id="score"></p><br>
-      <p id="percentage"></p> <br>
-
-      <input type="submit" value="Show Score" onclick="quizResult()">
+        <input type="submit" value="Show Score" onclick="quizResult()">
+    
     </div>
   </main>
   <?php include '../include/footer.php'; ?>
